@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #282A2E;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position.
+It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+The sticky value is not supported in IE or Edge 15 and earlier versions.
+However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #1D1F21;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  text-align: center; /* This centers the text horizontally */
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  display: inline-block; /* Allows the link elements to be centered */
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.layout-100 {
+  -ms-flex: 100%; /* IE10 */
+  flex: 100%;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pad-10 {
+  padding: 10px;
+}
+
+.pad-20 {
+  padding: 20px;
+}
+
+.pad-40 {
+  padding: 40px;
+}
+
+.margin-20 {
+  margin: 20px;
+}
+
+.text-white {
+  color: white;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #1D1F21;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
