@@ -35,6 +35,12 @@ However, for these versions the navbar will inherit default position */
   text-decoration: none;
 }
 
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #282A2E;
+  color: white;
+}
+
 .layout-100 {
   -ms-flex: 100%; /* IE10 */
   flex: 100%;
