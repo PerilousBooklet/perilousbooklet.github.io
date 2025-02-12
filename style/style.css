@@ -6,7 +6,29 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  background: #282A2E;
+  background: #282c34;
+}
+
+a {
+  color: #5cb3fa; /* Change this to any color you like */
+}
+
+a:visited {
+  color: #cd74e8; /* Color of visited links */
+}
+
+a:hover {
+  color: #eb6772; /* Color when you hover over the link */
+}
+
+a:active {
+  color: #9acc76; /* Color when the link is clicked */
+}
+
+
+.container a {
+  display: block;
+  margin-bottom: 10px; /* Adjust as needed */
 }
 
 /* Increase the font size of the heading */
@@ -20,7 +42,7 @@ The sticky value is not supported in IE or Edge 15 and earlier versions.
 However, for these versions the navbar will inherit default position */
 .navbar {
   overflow: hidden;
-  background-color: #1D1F21;
+  background-color: #21252B;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -37,7 +59,7 @@ However, for these versions the navbar will inherit default position */
 
 /* Change color on hover */
 .navbar a:hover {
-  background-color: #282A2E;
+  background-color: #282c34;
   color: white;
 }
 
@@ -76,8 +98,9 @@ However, for these versions the navbar will inherit default position */
 .footer {
   padding: 20px;
   text-align: center;
-  background: #1D1F21;
+  background: #21252B;
 }
+
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
