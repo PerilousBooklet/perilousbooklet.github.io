@@ -2,16 +2,10 @@
 
 My personal website.
 
-## How it works
+## Blog post creation workflow
 
-The website itself is static (HTML, CSS and a bit of Javascript for UI interactivity).
-
-The website is structured as follows:
-
-- `index.html`: main page with information about me
-- `blog.html`: blog page with my blog posts (converted to HTML from markdown with a bash script, run locally before every commit)
-- `components`: folder which contains the html code to be added to every HTML blog post file
-- `lib`: folder which contains the Javascript code
-- `style`: folder which contains the theme CSS files for the website
-- `assets`: folder which contains the assets for the website
-- `about.html`: ?
+1. Create new `.html` file inside `./posts`
+2. Use html base custom snippet recorded in Lite XL to create the base article template
+3. Write the content quickly by using [emmet](https://docs.emmet.io/)
+4. Update the article list in `./pages/blog.html`
+5. Commit changes to remote Github repository

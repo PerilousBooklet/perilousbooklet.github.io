@@ -25,7 +25,6 @@ a:active {
   color: #9acc76; /* Color when the link is clicked */
 }
 
-
 .container a {
   display: block;
   margin-bottom: 10px; /* Adjust as needed */
@@ -92,6 +91,15 @@ However, for these versions the navbar will inherit default position */
 
 .text-white {
   color: white;
+  font-size: 20q;
+}
+
+.text-blue {
+    color: #5cb3fa;
+}
+
+.text-green {
+    color: #9acc76;
 }
 
 /* Footer */
