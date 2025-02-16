@@ -10,7 +10,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../style/style.css"></link>
     <!-- Javascript -->
-    <script src="./lib/main.js"></script>
+    <script src="../lib/main.js"></script>
   </head>
   
   <body>
@@ -19,7 +19,7 @@
     <div class="navbar text-white">
       <a href="../index.html">Home</a>
       <a href="./cv.html">CV</a>
-      <a href="./projects.html">Projects</a>
+      <a class="active" href="./projects.html">Projects</a>
       <a href="./blog.html">Blog</a>
       <a href="./recommended.html">Recommended</a>
       <a href="./important.html">Important</a>
@@ -27,17 +27,27 @@
     
     <!-- CONTENT -->
     <div class="centered layout-100 pad-20">
-      
-      <div class="container_projects">
-        <div></div>
-        <div></div>
-        <div></div>
+
+      <!-- Column Left -->
+      <div class="container_projects text-white">
+        
+        <div onclick="openPage('https://github.com/PerilousBooklet/lite-xl-ptm')">
+          <img class="container_project" src="../assets/projects/ptm.png" alt="ptm">
+        </div>
+        <h3 style="text-align: center;">ptm</h3>
+        <p style="text-align: center;">A project template manager for Lite XL.</p>
+        
       </div>
       
-      <div class="container_projects">
-        <div></div>
-        <div></div>
-        <div></div>
+      <!-- Column Right -->
+      <div class="container_projects text-white">
+        
+        <!-- <div onclick="openPage('https://github.com/PerilousBooklet/project-manager')"> -->
+        <!--   <img class="container_project" src="../assets/projects/pm-temp.png" alt="pm"> -->
+        <!-- </div> -->
+        <!-- <h3 style="text-align: center;">Project Manager</h3> -->
+        <!-- <p style="text-align: center;">A simple project management app written in Java.</p> -->
+        
       </div>
       
     </div>

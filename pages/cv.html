@@ -10,17 +10,15 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../style/style.css"></link>
     <!-- Javascript -->
-    <script src="./lib/main.js"></script>
+    <script src="../lib/main.js"></script>
   </head>
   
   <body>
     
-    <!-- TODO: refactor all CSS classes (principle: one class / element, excluding reusable ones) -->
-    
     <!-- NAVBAR -->
     <div class="navbar text-white">
       <a href="../index.html">Home</a>
-      <a href="./cv.html">CV</a>
+      <a class="active" href="./cv.html">CV</a>
       <a href="./projects.html">Projects</a>
       <a href="./blog.html">Blog</a>
       <a href="./recommended.html">Recommended</a>
@@ -28,20 +26,34 @@
     </div>
     
     <!-- CONTENT -->
-    <div class="centered layout-100 pad-20">
-      <div class="text-white">
-        
-        <div style="border-bottom: 1px solid #FFFFFF;"><h2>Introduction</h2></div>
-        <p>...</p>
+    <div class="centered layout-100 pad-20 text-white" style="display: flex; align-items: flex-start;">
+      
+      <!-- WORK EXPERIENCE -->
+      <div class="text-white" style="width: 600px; word-wrap: break-word;">
 
-        <div style="border-bottom: 1px solid #FFFFFF;"><h2>Experience</h2></div>
-        <p>...</p>
+        <!-- TITLE -->
+        <div style="height: 40px; border-bottom: 1px solid #FFFFFF;"><h2>Work Experience</h2></div>
         
-        <div style="border-bottom: 1px solid #FFFFFF;"><h2>Dev Skills</h2></div>
+        <ul>
+          <li><p>TBA</p></li>
+        </ul>
+        
+      </div>
+      
+      <!-- SPACER -->
+      <div style="width: 50px;"></div>
+      
+      <!-- DEV SKILLS -->
+      <div style="width: 600px;">
+
+        <!-- TITLE -->
+        <div style="height: 40px; border-bottom: 1px solid #FFFFFF;"><h2>Dev Skills</h2></div>
         
         <h3>Languages</h3>
-        <div style="display: flex;">
+        <div class="container_skills">
           <div class="container_skill" style="width: 70px; background: #ED8B00;"><p>Java</p></div>
+          <!-- <div class="container_skill" style="width: 70px; background: #7F52FF;"><p>Kotlin</p></div> -->
+          <!-- <div class="container_skill" style="width: 70px; background: #4298B8;"><p>Groovy</p></div> -->
           <div class="container_skill" style="width: 70px; background: #41A0DB;"><p>SQL</p></div>
           <div class="container_skill" style="width: 80px; background: #E34F26;"><p>HTML</p></div>
           <div class="container_skill" style="width: 70px; background: #1572B6;"><p>CSS</p></div>
@@ -50,13 +62,20 @@
         </div>
         
         <h3>Frameworks</h3>
-        <div style="display: flex;">
+        <div class="container_skills">
           <div class="container_skill" style="width: 80px; background: #BB214A;"><p>Maven</p></div>
+          <!-- <div class="container_skill" style="width: 80px; background: #02303A;"><p>Gradle</p></div> -->
           <div class="container_skill" style="width: 120px; background: #EB292F;"><p>AWT/Swing</p></div>
+          <!-- <div class="container_skill" style="width: 80px; background: #6DB33F;"><p>Spring</p></div> -->
+          <!-- <div class="container_skill" style="width: 110px; background: #59666C;"><p>Hibernate</p></div> -->
+          <!-- <div class="container_skill" style="width: 70px; background: #25A162;"><p>JUnit</p></div> -->
+          <!-- <div class="container_skill" style="width: 90px; background: #79A54A;"><p>Mockito</p></div> -->
+          <!-- <div class="container_skill" style="width: 90px; background: #E74A45;"><p>LibGDX</p></div> -->
+          <!-- <div class="container_skill" style="width: 90px; background: #B8B8E9;"><p>LWJGL</p></div> -->
         </div>
         
         <h3>Tools</h3>
-        <div style="display: flex;">
+        <div class="container_skills">
           <div class="container_skill" style="width: 80px; background: #41A0DB;"><p>SQLite</p></div>
           <div class="container_skill" style="width: 130px; background: #316192;"><p>PostgreSQL</p></div>
           <div class="container_skill" style="width: 50px; background: #F05033;"><p>Git</p></div>
@@ -68,11 +87,19 @@
         </div>
         
         <h3>IDEs</h3>
-        <div style="display: flex;">
+        <div class="container_skills">
           <div class="container_skill" style="width: 110px;background: #FE7A16;"><p>Eclipse JE</p></div>
-          <div class="container_skill" style="width: 120px;background: #000000;"><p>IntelliJ IDEA</p></div>
-          <div class="container_skill" style="width: 100px;background: #1B6AC6;"><p>Netbeans</p></div>
+          <!-- <div class="container_skill" style="width: 120px;background: #000000;"><p>IntelliJ IDEA</p></div> -->
+          <!-- <div class="container_skill" style="width: 100px;background: #1B6AC6;"><p>Netbeans</p></div> -->
           <div class="container_skill" style="width: 80px; background: #2C333E;"><p>Lite XL</p></div>
+        </div>
+        
+        <h3>Platforms</h3>
+        <div class="container_skills">
+          <!-- <div class="container_skill" style="width: 150px; background: #0078D6;"><p>Windows 10/11</p></div> -->
+          <!-- <div class="container_skill" style="width: 90px; background: #000000;"><p>MacOS</p></div> -->
+          <div class="container_skill" style="width: 70px; background: #1793D1;"><p>Linux</p></div>
+          <div class="container_skill" style="width: 90px; background: #3DDC84;"><p>Android</p></div>
         </div>
         
       </div>

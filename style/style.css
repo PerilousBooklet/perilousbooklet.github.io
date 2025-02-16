@@ -8,27 +8,36 @@ body {
   background: #282c34;
 }
 
-a { color: #5cb3fa; }
+a {
+  color: #5cb3fa;
+  text-decoration: none;
+}
 a:visited { color: #cd74e8; }
 a:hover { color: #eb6772; }
 a:active { color: #9acc76; }
 
 
+/* FIX: excess padding/margin between <a> elements */
 .navbar {
-  overflow: hidden;
-  background-color: #21252B;
-  position: sticky;
-  position: -webkit-sticky;
   top: 0;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  overflow: hidden;
   text-align: center;
+  position: -webkit-sticky;
+  background-color: #21252B;
 }
 .navbar a {
   display: inline-block;
   color: #FFFFFF;
   padding: 14px 20px;
-  text-decoration: none;
 }
 .navbar a:hover {
+  background-color: #282c34;
+  color: #FFFFFF;
+}
+.navbar a.active {
   background-color: #282c34;
   color: #FFFFFF;
 }
@@ -50,26 +59,44 @@ a:active { color: #9acc76; }
 }
 
 
-.container_projects {}
-.container_projects div {
-  width: 500px;
-  height: 300px;
-  background: #F4D1A1;
-  margin-bottom: 20px;
-  margin-right: 20px;
+.container_skills {
+  display: flex;
+  flex-wrap: wrap;
 }
-
-
 .container_skill {
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 .container_skill p {
   color: #FFFFFF;
   font-size: 20q;
+}
+
+
+.container_projects {}
+.container_projects div {
+  width: 500px;
+  height: 300px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  /* background: #818791; */
+  /* border-radius: 15px; */
+}
+.container_project {
+  width: 500px;
+  height: 300px;
+  border-radius: 15px;
+}
+
+
+.container_recommended {
+  max-width: 500px;
+  word-wrap: break-word;
 }
 
 
@@ -98,7 +125,7 @@ a:active { color: #9acc76; }
 
 
 .text-white {
-  color: white;
+  color: #FFFFFF;
   font-size: 20q;
 }
 .text-blue {
@@ -115,13 +142,9 @@ a:active { color: #9acc76; }
   background: #21252B;
 }
 
-
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
-}
+/* Dynamic Design */
 @media screen and (max-width: 400px) {
+  /* TODO: add missing elements */
   .navbar a {
     float: none;
     width: 100%;
