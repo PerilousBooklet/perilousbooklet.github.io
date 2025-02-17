@@ -100,10 +100,6 @@ a:active { color: #9acc76; }
 }
 
 
-.layout-100 {
-  -ms-flex: 100%; /* IE10 */
-  flex: 100%;
-}
 .centered {
   display: flex;
   align-items: center;
