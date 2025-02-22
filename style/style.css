@@ -17,15 +17,14 @@ a:hover { color: #eb6772; }
 a:active { color: #9acc76; }
 
 
-/* FIX: excess padding/margin between <a> elements */
 .navbar {
   top: 0;
-  display: flex;
-  justify-content: center;
   position: sticky;
-  overflow: hidden;
-  text-align: center;
   position: -webkit-sticky;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  justify-content: center;
   background-color: #21252B;
 }
 .navbar a {
@@ -53,9 +52,20 @@ a:active { color: #9acc76; }
 }
 
 
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg); /* Invert the color from black (default) to white */
+}
+
+
 .container a {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+.container ul {
+  padding-bottom: 10px;
 }
 
 
@@ -138,11 +148,9 @@ a:active { color: #9acc76; }
   background: #21252B;
 }
 
-/* Dynamic Design */
+
 @media screen and (max-width: 400px) {
-  /* TODO: add missing elements */
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
+  /* TODO: navbar */
+  /* TODO: CV, left header */
+  /* TODO: project div should get smaller */
 }
