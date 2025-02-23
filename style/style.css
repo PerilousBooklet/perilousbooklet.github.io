@@ -82,7 +82,7 @@ a:active { color: #9acc76; }
   margin-bottom: 10px;
   border-radius: 5px;
 }
-.container_skill p {
+.container_skill a,p {
   color: #FFFFFF;
   font-size: 20q;
 }
