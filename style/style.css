@@ -94,8 +94,6 @@ a:active { color: #9acc76; }
   height: 300px;
   margin-bottom: 20px;
   margin-right: 20px;
-  /* background: #818791; */
-  /* border-radius: 15px; */
 }
 .container_project {
   width: 500px;
@@ -133,12 +131,6 @@ a:active { color: #9acc76; }
 .text-white {
   color: #FFFFFF;
   font-size: 20q;
-}
-.text-blue {
-    color: #5cb3fa;
-}
-.text-green {
-    color: #9acc76;
 }
 
 
