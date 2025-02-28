@@ -1,0 +1,9 @@
+.code {
+  width: 700px;
+  background: #21252B;
+  border-radius: 10px;
+  padding-left: 30px;
+  font-family: monospace;
+  white-space: pre-line;
+  line-height: 1.5;
+}

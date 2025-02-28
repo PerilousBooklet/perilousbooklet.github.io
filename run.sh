@@ -1,2 +1,2 @@
 #!/bin/bash
-xdg-open index.html
+firefox index.html
