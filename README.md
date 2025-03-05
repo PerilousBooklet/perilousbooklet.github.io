@@ -2,6 +2,8 @@
 
 My personal website.
 
+<!-- TODO: Github Actions that automatically create a post on my Linkedin profile whenever a new article is pushed in `/posts`. -->
+
 ## Blog post creation workflow
 
 1. Create new `.html` file inside `./posts`

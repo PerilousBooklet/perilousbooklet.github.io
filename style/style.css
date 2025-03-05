@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Cantarell;
   margin: 0;
   background: #282c34;
 }
@@ -49,6 +49,12 @@ a:active { color: #9acc76; }
   -ms-flex: 100%; /* IE10 */
   flex: 100%;
   padding: 20px;
+}
+
+
+.blog_post p {
+  line-height: 1.6;
+  font-size: 22q;
 }
 
 
