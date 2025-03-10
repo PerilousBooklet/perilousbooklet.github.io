@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cantarell;
+  margin: 0;
+  background: #282c34;
+}
+
+a {
+  color: #5cb3fa;
+  text-decoration: none;
+}
+a:visited { color: #cd74e8; }
+a:hover { color: #eb6772; }
+a:active { color: #9acc76; }
+
+
+.navbar {
+  top: 0;
+  position: sticky;
+  position: -webkit-sticky;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: #21252B;
+}
+.navbar a {
+  display: inline-block;
+  color: #FFFFFF;
+  padding: 14px 20px;
+}
+.navbar a:hover {
+  background-color: #282c34;
+  color: #FFFFFF;
+}
+.navbar a.active {
+  background-color: #282c34;
+  color: #FFFFFF;
+}
+
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -ms-flex: 100%; /* IE10 */
+  flex: 100%;
+  padding: 20px;
+}
+
+
+.blog_post p {
+  line-height: 1.6;
+  font-size: 22q;
+}
+
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg); /* Invert the color from black (default) to white */
+}
+
+
+.container a {
+  display: block;
+  margin-bottom: 10px;
+}
+.container ul {
+  padding-bottom: 10px;
+}
+
+
+.container_skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container_skill {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.container_skill a,p {
+  color: #FFFFFF;
+  font-size: 20q;
+}
+
+
+.container_projects {}
+.container_projects div {
+  width: 500px;
+  height: 300px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.container_project {
+  width: 500px;
+  height: 300px;
+  border-radius: 15px;
+}
+
+
+.container_recommended {
+  max-width: 500px;
+  word-wrap: break-word;
+}
+
+
+.container_tags {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 400px;
+}
+.container_tag {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  padding: 5px;
+  background: #2C3036;
+}
+.container_tags p {
+  font-size: 16q;
+}
+
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.pad-20 {
+  padding: 20px;
+}
+.pad-40 {
+  padding: 40px;
+}
+
+
+.margin-20 {
+  margin: 20px;
+}
+
+
+.text-white {
+  color: #FFFFFF;
+  font-size: 20q;
+}
+
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #21252B;
+}
+
+
+@media screen and (max-width: 400px) {
+  /* TODO: navbar */
+  /* TODO: CV, left header */
+  /* TODO: project div should get smaller */
+}

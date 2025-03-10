@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Tiny Static Templating Script
+
+## Copy `static` source code into `public` folder
+cp -vr ./static/* ./public/
+
+## Get list of files (use readarray to rearrange the data from `find` into a proper bash array)
+readarray -t FILES_ALL < <(find ./public ./public/posts ./public/pages -name '*.html')
+
+## Iterate tag replacement
+replace() {
+	CONTENT=$(<"$2")
+	CONTENT_ESCAPED=$(printf '%s\n' "$CONTENT" | sed 's/[&/\]/\\&/g;:a;N;$!ba;s/\n/\\n/g')
+	sed -i "s|$1|$CONTENT_ESCAPED|g" "$3"
+}
+for i in "${FILES_ALL[@]}"; do
+	# HEADER1
+	if grep "__HEADER1__" "$i"; then
+		replace "__HEADER1__" "./public/components/header1.html" "$i"
+	fi
+	# HEADER2
+	if grep "__HEADER2__" "$i"; then
+		replace "__HEADER2__" "./public/components/header2.html" "$i"
+	fi
+	# HEADER3
+	if grep "__HEADER3__" "$i"; then
+		replace "__HEADER3__" "./public/components/header3.html" "$i"
+	fi
+	# NAVBAR_POST
+	if grep "__NAVBAR_POST__" "$i"; then
+		replace "__NAVBAR_POST__" "./public/components/navbar_post.html" "$i"
+	fi
+done

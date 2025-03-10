@@ -2,16 +2,12 @@
 
 My personal website.
 
-<!-- TODO: Github Actions that automatically create a post on my Linkedin profile whenever a new article is pushed in `/posts`. -->
+<!-- TODO: Github Actions that automatically create a post on my Linkedin/Reddit profile whenever a new article is pushed in `/posts`. -->
 
-## Blog post creation workflow
+## How the site is structured
 
-1. Create new `.html` file inside `./posts`
-2. Use html base custom snippet recorded in Lite XL to create the base article template
-3. Write the content quickly by using [emmet](https://docs.emmet.io/)
-4. Update the article list in `./pages/blog.html`
-5. Commit changes to remote Github repository
+The `static` folder contains the source code of the website (HTML/CSS/JS from scratch, no frameworks).
 
-## Credits
+The `public` folder is filled with the generated code from the run script.
 
-- [Badge Icons](https://simpleicons.org/)
+To avoid using any server-side templating tools, this website uses custom tags that are matched by the run script and replaced with HTML code stored in component files, just like if it was using PHP.

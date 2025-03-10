@@ -114,6 +114,27 @@ a:active { color: #9acc76; }
 }
 
 
+.container_tags {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 400px;
+}
+.container_tag {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  padding: 5px;
+  background: #2C3036;
+}
+.container_tags p {
+  font-size: 16q;
+}
+
+
 .centered {
   display: flex;
   align-items: center;
