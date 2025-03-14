@@ -94,11 +94,14 @@ a:active { color: #9acc76; }
 }
 
 
-.container_projects {}
+.container_projects {
+  display: flex;
+  flex-wrap: wrap;
+}
 .container_projects div {
   width: 500px;
   height: 300px;
-  margin-bottom: 20px;
+  margin-bottom: 140px;
   margin-right: 20px;
 }
 .container_project {
@@ -111,6 +114,15 @@ a:active { color: #9acc76; }
 .container_recommended {
   max-width: 500px;
   word-wrap: break-word;
+}
+@media screen and (max-width: 1384px) {
+  .container_recommended div {
+    height: 80px;
+  }
+}
+.container_recommended_title {
+  height: 40px;
+  border-bottom: 1px solid #FFFFFF;
 }
 
 
@@ -165,11 +177,4 @@ a:active { color: #9acc76; }
   padding: 20px;
   text-align: center;
   background: #21252B;
-}
-
-
-@media screen and (max-width: 400px) {
-  /* TODO: navbar */
-  /* TODO: CV, left header */
-  /* TODO: project div should get smaller */
 }
