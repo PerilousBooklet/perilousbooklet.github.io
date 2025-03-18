@@ -1,30 +1,14 @@
 <!DOCTYPE html>
 <html>
   
-  <head>
-    <title>PerilousBooklet</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- CSS -->
-    <link rel="stylesheet" href="../../style/style.css"></link>
-    <link rel="stylesheet" href="../../style/codeblock.css"></link>
-    <!-- Javascript -->
-    <script src="../../lib/main.js"></script>
-  </head>
+  __HEADER3__
   
   <body>
     
-    <!-- NAVBAR -->
-    <div class="navbar text-white">
-      <a href="../../index.html">Home</a>
-      <a href="../../pages/cv.html">CV</a>
-      <a href="../../pages/projects.html">Projects</a>
-      <a href="../../pages/blog.html" class="active" >Blog</a>
-      <a href="../../pages/recommended.html">Recommended</a>
-    </div>
+    __NAVBAR_POST__
     
     <!-- CONTENT -->
-    <div class="centered layout-100 text-white">
+    <div class="centered layout-100 pad-20 text-white">
       <div style="max-width: 700px;">
         
         <!-- TITLE -->
@@ -42,24 +26,35 @@
         <p>
           Here's an image:
         </p>
+        
         <!-- EXAMPLE: IMAGE -->
         <img src="../../assets/projects/pm-temp.png" alt="pm" style="width: 700px; border-radius: 10px;">
         <p>
           And here's some code:
         </p>
+        
         <!-- EXAMPLE: CODE -->
-        <!-- TODO: onedark-colored code syntax -->
-        <!-- TODO: copy-to-clipboard button -->
-        <p class="code" style="height: 200px;">
-          public class SomeClass {
+        <!-- NOTE: each single-line of code is 40px high -->
+        <!-- NOTE: if the codeblock is too high to count by hand, use ./tools/calculate_codeblock_height.lua -->
+        <div style="position: relative;">
+          <p id="codeblock" class="code" style="height: 200px;">
+            public class SomeClass {
             &nbsp;&nbsp;public static void main(String[] args) {
-            &nbsp;&nbsp;&nbsp;&nbsp;  System.out.println("Hello world!");
+            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Hello world!");
             &nbsp;&nbsp;}
-          }
-        </p>
-        <!-- HOW TO ADD TABS -->
-        <!-- WRITE THE FOLLOWING AT LINE START: &nbsp;&nbsp; -->
-        <!-- TODO: write a custom snippet -->
+            }
+          </p>
+          <button id="copyButton" onclick="copyToClipboard()" class="copy_button">copy</button>
+        </div>
+        
+        <!-- EXAMPLE: VIDEO -->
+        <p>here's a video:</p>
+        <video src="/home/raffaele/test.mp4" style="border-radius: 10px;" width="700" controls>video</video>
+        
+        <!-- EXAMPLE: AUDIO -->
+        <p>here's an audio:</p>
+        <audio src="/home/raffaele/test.mp3" style="border-radius: 10px; width: 700px;" controls>audio</audio>
+        
         <p>
           Here's some example text...
         </p>

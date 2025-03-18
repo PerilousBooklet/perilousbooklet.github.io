@@ -5,7 +5,7 @@
 ## Copy `static` source code into `public` folder
 cp -vr ./static/* ./public/
 
-## Get list of files (use readarray to rearrange the data from `find` into a proper bash array)
+## Get list of files (use readarray to rearrange the data from `find` into proper bash array syntax)
 readarray -t FILES_ALL < <(find ./public ./public/posts ./public/pages -name '*.html')
 
 ## Iterate tag replacement
