@@ -202,13 +202,13 @@ a:active { color: #9acc76; }
   /* PROJECTS */
   /* FIX: redundant size rules */
   .container_projects div {
-    width: 400px;
+    width: 350px;
     height: 200px;
     margin-bottom: 140px;
     margin-right: 0px;
   }
   .container_project {
-     width: 400px;
+    width: 350px;
     height: 200px;
   }
   /* RECOMMENDED */
