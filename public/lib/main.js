@@ -16,3 +16,5 @@ function copyToClipboard() {
       console.error("Failed to copy text: ", err);
     });
 }
+
+// TODO: toggable (open-closed) table of contents

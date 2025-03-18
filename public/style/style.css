@@ -61,6 +61,9 @@ a:active { color: #9acc76; }
   line-height: 1.6;
   font-size: 22q;
 }
+.toc {
+  
+}
 
 
 .icon {
@@ -218,10 +221,13 @@ a:active { color: #9acc76; }
   .blog_post h2 {
     font-size: 24q;
   }
-  .blog_post p,a{
+  p,a{
     font-size: 16q;
   }
+  /* TODO: TOC */
+  /* ? */
   /* RECOMMENDED */
+  /* FIX: with normal layout it looks like flex-start isn't working */
   .container_recommended_root {
     flex-direction: column;
     align-items: center;
