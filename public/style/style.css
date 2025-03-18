@@ -211,6 +211,16 @@ a:active { color: #9acc76; }
     width: 350px;
     height: 200px;
   }
+  /* BLOG */
+  .blog_post h1 {
+    font-size: 30q;
+  }
+  .blog_post h2 {
+    font-size: 24q;
+  }
+  .blog_post p,a{
+    font-size: 18q;
+  }
   /* RECOMMENDED */
   .container_recommended_root {
     flex-direction: column;
