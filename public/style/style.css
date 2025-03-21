@@ -16,10 +16,6 @@ a:visited { color: #cd74e8; }
 a:hover { color: #eb6772; }
 a:active { color: #9acc76; }
 
-/* TODO: fix mobile-friendly rules */
-/* 1. project should become smaller */
-/* 2. navbar should become vertical */
-/* 3. recommended page sections should be positioned vertically and become smaller */
 
 .navbar {
   top: 0;
@@ -61,6 +57,7 @@ a:active { color: #9acc76; }
   line-height: 1.6;
   font-size: 22q;
 }
+/* TODO: toc */
 .toc {
   
 }
@@ -186,6 +183,27 @@ a:active { color: #9acc76; }
 }
 
 
+.course {
+  background: #000000;
+  padding: 20px;
+  width: 300px;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+.course_title {
+  margin-bottom: 30px;
+  width: 500px;
+  height: 50px;
+  background: #000000;
+  border-radius: 5px;
+}
+.topic {
+  background: #000000;
+  height: 30px;
+  border-radius: 5px;
+}
+
+
 .footer {
   padding: 20px;
   text-align: center;
@@ -224,12 +242,11 @@ a:active { color: #9acc76; }
   p,a{
     font-size: 16q;
   }
-  /* TODO: TOC */
-  /* ? */
+  /* TODO: toc, replace this with toggable (open/closed) sidebar */
   /* RECOMMENDED */
-  /* FIX: with normal layout it looks like flex-start isn't working */
   .container_recommended_root {
     flex-direction: column;
     align-items: center;
   }
+  /* TODO: LP */
 }

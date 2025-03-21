@@ -15,34 +15,28 @@
   </head>
   
   <body>
-
+    
     <!-- NAVBAR -->
     <div class="navbar text-white">
       <a href="../index.html">Home</a>
       <a href="./cv.html">CV</a>
       <a href="./projects.html">Projects</a>
-      <a href="./blog.html" class="active">Blog</a>
+      <a href="./blog.html">Blog</a>
       <a href="./recommended.html">Recommended</a>
-      <a href="./lp.html">LP</a>
+      <a href="./lp.html" class="active">LP</a>
     </div>
-    
-    <!-- FUTURE_TODO: tag system (JS, requires PHP) -->
-    <!-- FUTURE_TODO: search bar (JS, requires PHP) -->
     
     <!-- CONTENT -->
-    <div class="centered layout-100 pad-20">
-      <div class="container text-white" style="max-width: 400px;">
+    <main class="centered pad-20" style="color: #FFFFFF;">
+      <div>
         
-        <h2>2025</h2>
-        
-        <a href="../posts/2025/1-arch-linux-is-great.html">Arch Linux is great</a>
-        <div class="container_tags">
-          <div class="container_tag"><p>linux</p></div>
-          <div class="container_tag"><p>archlinux</p></div>
-        </div>
+        <div onclick="openPage('./courses/swe/swe.html')" class="centered course">Software Engineering</div>
+        <div onclick="openPage('./courses/hwe/hwe.html')" class="centered course">Hardware Engineering</div>
+        <div onclick="openPage('./courses/ds/ds.html')" class="centered course">Data Science</div>
+        <div onclick="openPage('./courses/tt/tt.html')" class="centered course">Tuttology</div>
         
       </div>
-    </div>
+    </main>
     
   </body>
   

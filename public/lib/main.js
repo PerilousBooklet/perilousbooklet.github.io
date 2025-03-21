@@ -1,6 +1,11 @@
-// Go to website upon click
+// Go to website upon click (new tab)
 function openPage(url) {
   window.open(url, '_blank');
+};
+
+// Go to website upon click (same tab)
+function openPage(url) {
+  window.location.href = url;
 };
 
 // Copy-to-clipboard button

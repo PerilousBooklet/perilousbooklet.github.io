@@ -50,8 +50,9 @@ local syntax = {
     ["literal"] =  { '<span style="color: #e6c07b;">', "</span>" },
     ["number"] =   { '<span style="color: #db9d63;">', "</span>" }
 }
+-- WIP: java syntax
 local language_java = {
     ["class"] = syntax["keyword"],
-    -- WIP: ...
 }
 
+-- TODO: function to generate the colored word

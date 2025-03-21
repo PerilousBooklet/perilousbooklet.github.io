@@ -3,12 +3,25 @@
   
   __HEADER3__
   
+  <style>
+    /* TODO: these must be generated with the build script */
+    #first-section {scroll-margin-top: 70px;}
+    #second-section {scroll-margin-top: 70px;}
+    #third-section {scroll-margin-top: 70px;}
+  </style>
+  
   <body>
     
     __NAVBAR_POST__
     
     <!-- CONTENT -->
-    <div class="centered layout-100 pad-20 text-white">
+    <div class="centered pad-20 text-white" style="display: flex; align-items: flex-start;">
+      
+      <!-- SPACER -->
+      <div style="min-width: 300px; padding: 20px;">
+        
+      </div>
+      
       <div style="max-width: 700px;">
         
         <!-- TITLE -->
@@ -17,21 +30,8 @@
         <p style="font-style: italic; text-align: center;">14/02/2025</p>
         <br>
         
-        <!-- TOC -->
-        <!-- TODO: write code to add the IDs to every h2 (generate them from the titles) and 
-                              to generate the TOC for every article (create __TOC__ tag) -->
-        <!-- FIX: the go-to-id destination position is too high (gets covered by navbar) -->
-        <div style="padding-bottom: 20px;">
-          <p>Table of Contents</p>
-          <ul>
-          	<li><a href="#first-section">First section of the article</a></li>
-          	<li><a href="#second-section">Second section of the article</a></li>
-          	<li><a href="#third-section">Third section of the article</a></li>
-          </ul>
-        </div>
-        
         <!-- CONTENT -->
-        <h2 id="#first-section" style="color: #5cb3fa;">First Section of the Article</h2>
+        <h2 id="first-section" style="color: #5cb3fa;">First Section of the Article</h2>
         <!-- EXAMPLE: PARAGRAPH -->
         <p>
           Here's some example text...
@@ -49,6 +49,7 @@
         <!-- EXAMPLE: CODE -->
         <!-- NOTE: each single-line of code is 40px high -->
         <!-- NOTE: if the codeblock is too high to count by hand, use ./tools/calculate_codeblock_height.lua -->
+        <!-- FIX: copy/paste no longer works -->
         <div style="position: relative;">
           <p id="codeblock" class="code" style="height: 200px;">
             public class SomeClass {
@@ -220,6 +221,20 @@
         </p>
         
       </div>
+      
+      <!-- TOC -->
+      <!-- TODO: write code to add the IDs to every h2 (generate them from the titles) and
+                            to generate the TOC for every article (create __TOC__ tag) -->
+      <!-- FIX: the go-to-id destination position is too high (gets covered by navbar) -->
+      <div style="min-width: 300px; padding: 20px; max-width: 700px;">
+        <p style="font-size: 1.5em; color: #5cb3fa;"><b>Table of Contents</b></p>
+        <ul>
+          <li><a href="#first-section">First section of the article</a></li>
+          <li><a href="#second-section">Second section of the article</a></li>
+          <li><a href="#third-section">Third section of the article</a></li>
+        </ul>
+      </div>
+      
     </div>
     
   </body>

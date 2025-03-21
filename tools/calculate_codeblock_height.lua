@@ -1,5 +1,5 @@
 -- Function to count the number of lines in a multi-line string
-function countLines(str)
+local function countLines(str)
     local count = 0
     for _ in string.gmatch(str, "[^\n]+") do
         count = count + 1

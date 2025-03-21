@@ -13,4 +13,4 @@ The `public` folder is filled with the generated code from the run script.
 To avoid using any server-side templating tools, this website uses custom tags that are matched by the build script and 
 replaced with HTML code stored in component files, just as if it was using PHP.
 
-A small script written in Lua is also used to generate properly indented and colored code blocks.
+A small script written in Lua is also used to generate properly indented and colored code blocks (WIP).

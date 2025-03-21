@@ -27,8 +27,20 @@ for i in "${FILES_ALL[@]}"; do
 	if grep "__HEADER3__" "$i"; then
 		replace "__HEADER3__" "./public/components/header3.html" "$i"
 	fi
+	# HEADER4
+	if grep "__HEADER4__" "$i"; then
+		replace "__HEADER4__" "./public/components/header4.html" "$i"
+	fi
 	# NAVBAR_POST
 	if grep "__NAVBAR_POST__" "$i"; then
 		replace "__NAVBAR_POST__" "./public/components/navbar_post.html" "$i"
+	fi
+	# NAVBAR_COURSE
+	if grep "__NAVBAR_COURSE__" "$i"; then
+		replace "__NAVBAR_COURSE__" "./public/components/navbar_course.html" "$i"
+	fi
+	# NAVBAR_TOPIC
+	if grep "__NAVBAR_TOPIC__" "$i"; then
+		replace "__NAVBAR_TOPIC__" "./public/components/navbar_topic.html" "$i"
 	fi
 done
