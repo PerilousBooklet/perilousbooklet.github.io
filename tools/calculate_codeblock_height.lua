@@ -6,11 +6,20 @@ local function countLines(str)
     end
     return count
 end
+
+-- Reading the multi-line string from a text file
+local function readFile(fileName)
+    local file = io.open(fileName, "r") -- Open the file in read mode
+    if not file then
+        error("Could not open file: " .. fileName)
+    end
+    local content = file:read("*a") -- Read the entire file contents
+    file:close() -- Close the file
+    return content
+end
+
 -- Example usage
-local multiLineString = [[
-This is a multi-line
-text string. Each new
-line will be counted.
-]]
+local fileName = "code.txt" -- Replace this with your text file name
+local multiLineString = readFile(fileName)
 local lineCount = countLines(multiLineString)
 print("Number of lines: ", lineCount)

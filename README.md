@@ -14,3 +14,14 @@ To avoid using any server-side templating tools, this website uses custom tags t
 replaced with HTML code stored in component files, just as if it was using PHP.
 
 A small script written in Lua is also used to generate properly indented and colored code blocks (WIP).
+
+## How to create a blog post
+
+(I use [emmet](https://emmet.io/) and custom HTML snippets saved in my text editor of choice to save time while writing posts in pure HTML/CSS)
+
+1. Create a new HTML file inside `./static/posts/2025`
+2. Generate the base blog post template
+3. Write the article (use the element templates to add images/videos/audios/blockquotes/...)
+4. Generate the paragraphs treeview with `lua ./tools/generate_treeview.lua` (this script runs ONCE)
+5. Re-generate the website with `./build.sh`
+6. Go to the website with `./run.sh`

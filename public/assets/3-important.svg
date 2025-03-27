@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="dodgerblue" style="margin-right: 5px; transform: translateY(1px);">
+            <!-- Circle outline -->
+            <circle cx="12" cy="12" r="10" stroke="dodgerblue" stroke-width="2" fill="none"></circle>
+            <!-- Vertical exclamation line -->
+            <line x1="12" y1="7" x2="12" y2="13" stroke="dodgerblue" stroke-width="2"></line>
+            <!-- Dot of exclamation -->
+            <circle cx="12" cy="16" r="1.5" fill="dodgerblue"></circle>
+          </svg>

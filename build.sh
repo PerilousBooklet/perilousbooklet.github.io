@@ -43,4 +43,11 @@ for i in "${FILES_ALL[@]}"; do
 	if grep "__NAVBAR_TOPIC__" "$i"; then
 		replace "__NAVBAR_TOPIC__" "./public/components/navbar_topic.html" "$i"
 	fi
+	# TREEVIEW_PARAGRAPHS
 done
+
+# TODO: Generate article treeviews (add new tag inside above loop and use the lua script)
+
+
+# TODO: Generate course topic treeviews (same as above)
+# TODO: Generate article code blocks

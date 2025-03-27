@@ -40,6 +40,10 @@ local new_string = table.concat(modified_lines, "\n")
 -- Output the result
 print(new_string)
 
+
+-- --- --- ---
+
+
 -- WIP: color the string
 local syntax = {
     ["comment"] =  { '<span style="color: #5f697a;">', "</span>" },
@@ -51,8 +55,9 @@ local syntax = {
     ["number"] =   { '<span style="color: #db9d63;">', "</span>" }
 }
 -- WIP: java syntax
-local language_java = {
+local symbols = {
     ["class"] = syntax["keyword"],
 }
 
 -- TODO: function to generate the colored word
+

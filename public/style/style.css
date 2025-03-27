@@ -15,6 +15,12 @@ a {
 a:visited { color: #cd74e8; }
 a:hover { color: #eb6772; }
 a:active { color: #9acc76; }
+blockquote {
+  font-style: italic;
+  margin: 1em 0;
+  padding-left: 20px;
+  border-left: 2px solid #ccc;
+}
 
 
 .navbar {
@@ -57,9 +63,16 @@ a:active { color: #9acc76; }
   line-height: 1.6;
   font-size: 22q;
 }
-/* TODO: toc */
 .toc {
-  
+  min-width: 300px;
+  max-width: 700px;
+}
+.toc p {
+  font-size: 1.5em;
+  color: #5cb3fa;
+}
+.toc a {
+  line-height: 1.6;
 }
 
 
@@ -67,8 +80,7 @@ a:active { color: #9acc76; }
   width: 16px;
   height: 16px;
   margin-right: 8px;
-  /* Invert the color from black (default) to white */
-  filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg); /* Invert the color from black (default) to white */
 }
 
 
@@ -242,7 +254,6 @@ a:active { color: #9acc76; }
   p,a{
     font-size: 16q;
   }
-  /* TODO: toc, replace this with toggable (open/closed) sidebar */
   /* RECOMMENDED */
   .container_recommended_root {
     flex-direction: column;
