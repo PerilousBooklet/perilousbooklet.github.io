@@ -196,7 +196,7 @@ blockquote {
 
 
 .course {
-  background: #000000;
+  background: #21252B;
   padding: 20px;
   width: 300px;
   margin-top: 30px;
@@ -206,11 +206,11 @@ blockquote {
   margin-bottom: 30px;
   width: 500px;
   height: 50px;
-  background: #000000;
+  background: #21252B;
   border-radius: 5px;
 }
 .topic {
-  background: #000000;
+  background: #21252B;
   height: 30px;
   border-radius: 5px;
 }
