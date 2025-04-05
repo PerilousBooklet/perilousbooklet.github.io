@@ -174,6 +174,10 @@ blockquote {
   align-items: center;
   justify-content: center;
 }
+.aligned_at_start {
+  display: flex;
+  align-items: flex-start;
+}
 
 
 .pad-20 {
@@ -232,6 +236,16 @@ blockquote {
   .navbar a {
     text-align: center;
   }
+  /* HOME */
+  /* TODO: add close-in of image */
+  /* CV */
+  /* FUTURE_TODO: fix zooming layout */
+  .aligned_at_start {
+    flex-wrap: wrap;
+  }
+  .aligned_at_start div {
+    width: 384px;
+  }
   /* PROJECTS */
   /* FIX: redundant size rules */
   .container_projects div {
@@ -245,15 +259,6 @@ blockquote {
     height: 200px;
   }
   /* BLOG */
-  .blog_post h1 {
-    font-size: 30q;
-  }
-  .blog_post h2 {
-    font-size: 24q;
-  }
-  p,a{
-    font-size: 16q;
-  }
   /* RECOMMENDED */
   .container_recommended_root {
     flex-direction: column;
