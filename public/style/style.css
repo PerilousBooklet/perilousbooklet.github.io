@@ -137,11 +137,6 @@ blockquote {
   max-width: 500px;
   word-wrap: break-word;
 }
-@media screen and (max-width: 1384px) {
-  .container_recommended div {
-    height: 80px;
-  }
-}
 .container_recommended_title {
   height: 40px;
   border-bottom: 1px solid #FFFFFF;
