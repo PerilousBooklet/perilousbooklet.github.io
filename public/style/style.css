@@ -239,7 +239,7 @@ blockquote {
     flex-wrap: wrap;
   }
   .container_cv {
-    width: 384px;
+    width: 350px;
   }
   /* PROJECTS */
   /* FIX: redundant size rules */
