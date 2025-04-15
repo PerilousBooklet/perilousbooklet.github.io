@@ -93,6 +93,9 @@ blockquote {
 }
 
 
+.container_cv {
+  width: 600px;
+}
 .container_skills {
   display: flex;
   flex-wrap: wrap;
@@ -235,7 +238,7 @@ blockquote {
   .aligned_at_start {
     flex-wrap: wrap;
   }
-  .aligned_at_start div {
+  .container_cv {
     width: 384px;
   }
   /* PROJECTS */
