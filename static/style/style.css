@@ -172,7 +172,6 @@ blockquote {
 .aligned_at_start {
   display: flex;
   align-items: flex-start;
-  width: 500px;
 }
 
 
