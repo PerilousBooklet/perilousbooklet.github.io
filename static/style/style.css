@@ -108,6 +108,7 @@ blockquote {
   margin-right: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
+  cursor: default;
 }
 .container_skill a,p {
   color: #FFFFFF;
@@ -200,6 +201,7 @@ blockquote {
   width: 500px;
   margin-top: 50px;
   border-radius: 5px;
+  cursor: default;
 }
 .course_title {
   margin-bottom: 30px;
@@ -212,6 +214,7 @@ blockquote {
   background: #21252B;
   height: 30px;
   border-radius: 5px;
+  cursor: default;
 }
 
 

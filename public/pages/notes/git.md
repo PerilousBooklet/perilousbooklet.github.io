@@ -6,6 +6,8 @@ I staged the wrong code: `git restore --staged whatever_files`
 
 I modified the wrong branch, but I still need the changes: stash the changes and then reset the branch to the latest commit: `git stash -m "comment"` and `git reset --hard`
 
+I need to reset the local repo to the latest from the remote repo: `git fetch --all` and `git reset --hard origin/master` (`master` is the name of the desired branch)
+
 I committed the wrong code: 
 
 I need to update a branch: 

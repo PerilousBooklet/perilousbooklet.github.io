@@ -23,5 +23,5 @@
 
 .copy_button:active {
   transform: scale(0.90); /* Slightly shrinks the button */
-  background-color: #282C34; /* Darker green on press */
+  background-color: #282C34; /* Changes color on press */
 }
