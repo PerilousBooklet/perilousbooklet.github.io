@@ -1,5 +1,0 @@
-# SQL
-
-TODO: toc
-
-

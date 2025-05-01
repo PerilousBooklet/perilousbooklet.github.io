@@ -2,7 +2,7 @@
 
 My personal website.
 
-<!-- TODO: Github Actions that automatically create a post on my Linkedin/Reddit profile whenever a new article is pushed in `/posts`. -->
+<!-- TODO: Github Actions that automatically create a post on my Linkedin/Reddit/Youtube profile whenever a new article is pushed in `/posts`. -->
 
 ## How the site is structured
 
