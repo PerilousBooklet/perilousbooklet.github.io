@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+  
+  <title>Raffaele's Blog</title>
+  <description>Raffaele's Blog</description>
+  <link>https://perilousbooklet.github.io</link>
+  
+  <!-- ARTICLE 1 -->
+  <item>
+    <title>Arch Linux is Great</title>
+    <link>https://perilousbooklet.github.io/public/posts/2025/arch-linux-is-great.html</link>
+  </item>
+  
+  <!-- ARTICLE 2 -->
+  <!-- <item> -->
+  <!--   <title></title> -->
+  <!--   <link></link> -->
+  <!-- </item> -->
+  
+</channel>
+
+</rss>

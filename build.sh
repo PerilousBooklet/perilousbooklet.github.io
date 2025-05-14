@@ -53,9 +53,8 @@ for i in "${FILES_ALL[@]}"; do
 done
 
 # TODO: Generate article treeviews (add new tag inside above loop and use the lua script)
-
 # TODO: iterate through articles in ./static/posts/
-# TODO: Generate article code blockss
-
+# TODO: Generate article code blocks
+# TODO: Update RSS Feed XML file
 # TODO: Generate KB treeview and pages
 # TODO: Generate course topic treeviews (same as above)
