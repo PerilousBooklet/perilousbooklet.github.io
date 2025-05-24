@@ -2,26 +2,24 @@
 
 My personal website.
 
-<!-- TODO: Github Actions that automatically create a post on my Linkedin/Reddit/Youtube profile whenever a new article is pushed in `/posts`. -->
+<!-- TODO: Github Actions that automatically create a post on my social network profiles whenever a new article is pushed in `/posts`. -->
+
+<!-- TODO: convert the website to a basic java spring webapp to setup proper page routing -->
 
 ## How the site is structured
 
-The `static` folder contains the source code of the website (HTML/CSS/JS from scratch, no frameworks).
+The `static` folder contains the source code of the website (HTML/CSS/touch-of-JS from scratch, no frameworks).
 
-The `public` folder is filled with the generated code from the run script.
+The `public` folder is filled with generated code from a few templating scripts written in Lua.
 
-To avoid using any server-side templating tools, this website uses custom tags that are matched by the build script and 
-replaced with HTML code stored in component files, just as if it was using PHP.
-
-A small script written in Lua is also used to generate properly indented and colored code blocks (WIP).
+<!-- TODO: fix RSS support -->
 
 ## How to create a blog post
 
 (I use [emmet](https://emmet.io/) and custom HTML snippets saved in my text editor of choice to save time while writing posts in pure HTML/CSS)
 
-1. Create a new HTML file inside `./static/posts/2025`
-2. Generate the base blog post template
-3. Write the article (use the element templates to add images/videos/audios/blockquotes/...)
-4. Generate the paragraphs treeview with `lua ./tools/generate_treeview.lua` (this script runs ONCE)
-5. Re-generate the website with `./build.sh`
-6. Go to the website with `./run.sh`
+1. Create a new HTML file inside `./static/posts/current_year`
+2. Generate the base blog post template with `snpt-blog-base-article`
+3. Write the article (use the snippets to add images, videos ,audios ,blockquotes, codeblocks, ...)
+4. Generate the website with `./build.sh`
+6. Open the website with `./run.sh`

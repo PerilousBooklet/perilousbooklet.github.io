@@ -18,7 +18,7 @@ file:close()
 local pattern = "^%s+"
 
 -- Filler to replace the matched spaces
-local filler = "&nbsp;"
+local filler = "&nbsp;&nbsp;"
 
 -- Table to store the modified lines
 local modified_lines = {}
@@ -41,6 +41,8 @@ local new_string = table.concat(modified_lines, "\n")
 print(new_string)
 
 
+-- --- --- ---
+-- --- --- ---
 -- --- --- ---
 
 
