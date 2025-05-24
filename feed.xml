@@ -4,20 +4,19 @@
 <channel>
   
   <title>Raffaele's Blog</title>
-  <description>Raffaele's Blog</description>
+  <description>My presence on the Internet.</description>
   <link>https://perilousbooklet.github.io</link>
+  <ttl>1440</ttl> <!-- Allow refreshing the feed every 60*24=1440 minutes -->
+  <!-- TODO: Generate timestamp with https://timestampgenerator.com/ -->
+  <!-- <lastBuildDate></lastBuildDate> -->
   
   <!-- ARTICLE 1 -->
   <item>
     <title>Arch Linux is Great</title>
     <link>https://perilousbooklet.github.io/public/posts/2025/arch-linux-is-great.html</link>
+    <!-- TODO: Generate timestamp with https://timestampgenerator.com/ -->
+    <!-- <pubDate></pubDate> -->
   </item>
-  
-  <!-- ARTICLE 2 -->
-  <!-- <item> -->
-  <!--   <title></title> -->
-  <!--   <link></link> -->
-  <!-- </item> -->
   
 </channel>
 

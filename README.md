@@ -23,3 +23,7 @@ The `public` folder is filled with generated code from a few templating scripts 
 3. Write the article (use the snippets to add images, videos ,audios ,blockquotes, codeblocks, ...)
 4. Generate the website with `./build.sh`
 6. Open the website with `./run.sh`
+
+## Credits
+
+- [RSS icon](https://www.svgrepo.com/svg/25140/rss)
