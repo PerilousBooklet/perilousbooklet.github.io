@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font: Cantarell;
 }
 
 body {
@@ -12,7 +13,7 @@ a {
   color: #5cb3fa;
   text-decoration: none;
 }
-a:visited { color: #cd74e8; }
+a:visited { color: #FFFFFF; }
 a:hover { color: #eb6772; }
 a:active { color: #9acc76; }
 blockquote {
@@ -218,6 +219,12 @@ blockquote {
 }
 
 
+summary::before {
+  margin-right: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+
 .footer {
   padding: 20px;
   text-align: center;
@@ -227,12 +234,9 @@ blockquote {
 /* Mobile-friendly style */
 @media (max-width: 768px) {
   /* NAVBAR */
-  /* TODO: replace this with toggable (open/closed) sidebar */
-  .navbar {
-    flex-wrap: wrap;
-  }
   .navbar a {
-    text-align: center;
+    padding: 8px 10px;
+    font-size: 12px;
   }
   /* HOME */
   /* TODO: add close-in of image */
