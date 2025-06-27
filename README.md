@@ -2,9 +2,19 @@
 
 My personal website.
 
+<!-- TODO: convert the website to a basic java spring webapp to setup PROPER PAGE ROUTING -->
+<!-- TODO: release with Github actions -->
+<!-- TODO: custom docker image -->
+<!-- TODO: hosted on Hetzner VPS: arch linux, ufw, fail2ban, apparmor, clamscan -->
+<!-- TODO: traffic-filtering proxy -->
+<!-- TODO: let's encrypt SSL certificate -->
+<!-- TODO: anubis scrape protection -->
+<!-- TODO: bearblog analytics -->
+<!-- TODO: website monitoring dashboard -->
+<!-- TODO: indieweb: implement webmentions, microformats, POSSE -->
 <!-- TODO: Github Actions that automatically create a post on my social network profiles whenever a new article is pushed in `/posts`. -->
 
-<!-- TODO: convert the website to a basic java spring webapp to setup proper page routing -->
+<!-- WIP: create the learning platform prototype, HTML-generation scripts included -->
 
 ## How the site is structured
 
