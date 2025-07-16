@@ -140,6 +140,7 @@ blockquote {
 }
 .container_recommended {
   max-width: 500px;
+  width: 400px;
   word-wrap: break-word;
 }
 .container_recommended_title {
@@ -333,6 +334,9 @@ summary,li {
   .container_recommended_root {
     flex-direction: column;
     align-items: center;
+  }
+  .container_recommended {
+    width: 350px;
   }
   /* TODO: LP */
 }
