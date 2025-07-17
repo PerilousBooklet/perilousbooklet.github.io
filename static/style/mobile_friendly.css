@@ -1,0 +1,39 @@
+@media (max-width: 768px) {
+  /* NAVBAR */
+  .navbar a {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  /* HOME */
+  /* TODO: add close-in of image */
+  /* CV */
+  /* FUTURE_TODO: fix zooming layout */
+  .aligned_at_start {
+    flex-wrap: wrap;
+  }
+  .container_cv {
+    width: 350px;
+  }
+  /* PROJECTS */
+  /* FIX: redundant size rules */
+  .container_projects div {
+    width: 350px;
+    height: 200px;
+    margin-bottom: 140px;
+    margin-right: 0px;
+  }
+  .container_project {
+    width: 350px;
+    height: 200px;
+  }
+  /* BLOG */
+  /* RECOMMENDED */
+  .container_recommended_root {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container_recommended {
+    width: 350px;
+  }
+  /* TODO: LP */
+}
