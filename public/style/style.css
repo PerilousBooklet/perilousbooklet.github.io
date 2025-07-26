@@ -22,6 +22,12 @@ blockquote {
   padding-left: 20px;
   border-left: 2px solid #ccc;
 }
+p,li {
+  cursor: default;
+}
+li {
+  line-height: 2;
+}
 
 
 .navbar {
@@ -220,15 +226,36 @@ blockquote {
 }
 
 
+.dashboard_section {
+  background: #21252B; 
+  color: white;
+  
+  padding-top: 5px; 
+  padding-left: 20px; 
+  padding-right: 20px; 
+  padding-bottom: 20px; 
+  
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+  margin-left: 10px; 
+  margin-right: 10px; 
+  
+  width: 360px; 
+  height: 910px;
+  
+  border-radius: 5px;
+}
+
+
 summary::before {
   margin-right: 10px;
   transition: transform 0.2s ease-in-out;
 }
-
-
 summary,li {
   user-select: none; /* Disable text selection */
 }
+
+
 .tree {
   --spacing: 1.5rem;
   --radius: 10px;
