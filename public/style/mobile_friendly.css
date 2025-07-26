@@ -2,7 +2,7 @@
   /* NAVBAR */
   .navbar a {
     padding: 8px 10px;
-    font-size: 12px;
+    font-size: 11px;
   }
   /* HOME */
   /* TODO: add close-in of image */
@@ -25,6 +25,11 @@
   .container_project {
     width: 350px;
     height: 200px;
+  }
+  /* DEV */
+  .container_dev{
+    flex-direction: column;
+    align-items: center;
   }
   /* BLOG */
   /* RECOMMENDED */

@@ -176,6 +176,13 @@ li {
 }
 
 
+.container_dev {
+  display: flex; 
+  align-items: start; 
+  justify-content: center;
+}
+
+
 .centered {
   display: flex;
   align-items: center;
