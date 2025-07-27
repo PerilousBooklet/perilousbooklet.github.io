@@ -23,13 +23,6 @@ blockquote {
   border-left: 2px solid #ccc;
 }
 
-p,li {
-  cursor: default;
-}
-li {
-  line-height: 2;
-}
-
 
 .navbar {
   top: 0;
