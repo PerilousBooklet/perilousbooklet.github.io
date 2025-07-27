@@ -22,6 +22,7 @@ blockquote {
   padding-left: 20px;
   border-left: 2px solid #ccc;
 }
+
 p,li {
   cursor: default;
 }
