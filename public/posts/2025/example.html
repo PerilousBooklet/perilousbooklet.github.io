@@ -18,7 +18,15 @@
   
   <body>
     
-    __TABLE_OF_CONTENTS_STYLE__
+    <style>
+      #first-section-of-the-article {scroll-margin-top: 70px;}
+      #second-section-of-the-article {scroll-margin-top: 70px;}
+      /* Mobile-friendly style */
+      @media (max-width: 768px) {
+        #first-section-of-the-article {scroll-margin-top: 120px;}
+        #second-section-of-the-article {scroll-margin-top: 120px;}
+      }
+    </style>
     
     <!-- NAVBAR -->
     <div class="navbar text-white">
@@ -42,10 +50,18 @@
         <p style="font-style: italic; text-align: center;">30/04/2025</p>
         <br>
         
-        __TABLE_OF_CONTENTS__
+        <!-- TABLE OF CONTENTS -->
+        <div class="toc">
+          <p><b>Table of Contents</b></p>
+          <ul>
+            <li><a href="#first-section-of-the-article">First Section of the Article</a></li>
+            <li><a href="#second-section-of-the-article">Second Section of the Article</a></li>
+          </ul>
+        </div>
+        <br>
         
         <!-- CONTENT -->
-        <h2 style="color: #5cb3fa;">First Section of the Article</h2>
+        <h2 id="first-section-of-the-article" style="color: #5cb3fa;">First Section of the Article</h2>
         <!-- EXAMPLE: PARAGRAPH -->
         <p>
           Here's some example text...
@@ -53,7 +69,7 @@
         
         <br>
         
-        <h2 style="color: #5cb3fa;">Second Section of the Article</h2>
+        <h2 id="second-section-of-the-article" style="color: #5cb3fa;">Second Section of the Article</h2>
         <p>
           Here's some example text...
         </p>

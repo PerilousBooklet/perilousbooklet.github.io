@@ -15,6 +15,40 @@
     <script src="../../../lib/main.js"></script>
   </head>
   
+  <style>
+    summary,li {
+      user-select: none; /* Disable text selection */
+    }
+    summary::before {
+      margin-right: 10px;
+      transition: transform 0.2s ease-in-out;
+    }
+    .tree {
+      --spacing: 1.5rem;
+      --radius: 10px;
+      margin: 20px;
+    }
+    .tree li {
+      display: block;
+      position: relative;
+    }
+    /* Remove default spacing from lists */
+    ul, li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 19q;
+    }
+    /* Add minimal spacing for nested items */
+    ul ul {
+      padding-left: 15px; /* Adjust indentation as needed */
+    }
+    /* Reduce line height for tighter vertical spacing */
+    li {
+      line-height: 1.2; /* Default is usually 1.4-1.6 */
+    }
+  </style>
+  
   <body>
     
     <!-- NAVBAR -->
@@ -33,7 +67,7 @@
     <main class="centered pad-20" style="color: #FFFFFF;">
       <div class="aligned_at_start">
         
-        <!-- PLACEHOLDER SECTIONS(?) TREEVIEW -->
+        <!-- FILES/FOLDERS TREEVIEW -->
         <!-- TODO: will eventually be generated with scripts (get list of files, get list of chapters (headers) of each file) -->
         <!-- TAG: __TREEVIEW_TOPIC__ -->
         <div style="width: 400px; height: 800px; background: #21252B; padding: 0px;">
@@ -113,9 +147,9 @@
         <!-- SPACER -->
         <div style="width: 25px;"></div>
         
-        <!-- PLACEHOLDER CHAPTERS TREEVIEW -->
+        <!-- CHAPTERS TREEVIEW -->
         <!-- TODO: generate the ul>li chapters treeview -->
-        <!-- TODO: add hover color change (like in navbar) -->
+        <!-- TODO: add background-color change on hover (like in navbar) -->
         <!-- TAG: __TREEVIEW_CHAPTERS__ -->
         <div style="width: 400px; height: 800px; background: #21252B; padding: 0px;">
           <ul class="tree">

@@ -1,0 +1,33 @@
+<style>
+    summary,li {
+      user-select: none; /* Disable text selection */
+    }
+    summary::before {
+      margin-right: 10px;
+      transition: transform 0.2s ease-in-out;
+    }
+    .tree {
+      --spacing: 1.5rem;
+      --radius: 10px;
+      margin: 20px;
+    }
+    .tree li {
+      display: block;
+      position: relative;
+    }
+    /* Remove default spacing from lists */
+    ul, li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 19q;
+    }
+    /* Add minimal spacing for nested items */
+    ul ul {
+      padding-left: 15px; /* Adjust indentation as needed */
+    }
+    /* Reduce line height for tighter vertical spacing */
+    li {
+      line-height: 1.2; /* Default is usually 1.4-1.6 */
+    }
+  </style>

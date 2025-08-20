@@ -4,7 +4,7 @@
 ## Tiny Static Templating Script ##
 ###################################
 
-## Copy `static` source code into `public` folder
+# Copy `static` source code into `public` folder
 if [ ! -d ./public ]; then
 	mkdir -v ./public
 else
@@ -12,10 +12,10 @@ else
 	cp -vr ./static/* ./public/
 fi
 
-## Get list of files (use readarray to rearrange the data from `find` into proper bash array syntax)
+# Get list of files (use readarray to rearrange the data from `find` into proper bash array syntax)
 readarray -t FILES_ALL < <(find ./public ./public/posts ./public/pages -name '*.html')
 
-## Iterate tag replacement
+# Iterate tag replacement
 replace() {
 	CONTENT=$(<"$2")
 	CONTENT_ESCAPED=$(printf '%s\n' "$CONTENT" | sed 's/[&/\]/\\&/g;:a;N;$!ba;s/\n/\\n/g')
@@ -50,12 +50,17 @@ for i in "${FILES_ALL[@]}"; do
 	if grep "__NAVBAR_TOPIC__" "$i"; then
 		replace "__NAVBAR_TOPIC__" "./public/components/navbar_topic.html" "$i"
 	fi
+	# STYLE_TREEVIEW
+	if grep "__STYLE_TREEVIEW__" "$i"; then
+		replace "__STYLE_TREEVIEW__" "./public/components/style_treeview.html" "$i"
+	fi
 done
 
-# TODO: Generate articles
+# Generate table of contents for each blog post
+readarray -t POSTS_ALL < <(find ./public/posts -name '*.html')
+for i in "${POSTS_ALL[@]}"; do
+	lua tools/generate_toc.lua "$i"
+	echo -e "\e[32m[INFO]\e[0m: generated TOC for $i"
+done
 
-# TODO: Update RSS Feed XML file
-
-# TODO: Generate KB treeview and pages
-
-# TODO: Generate course topic treeviews (same as above)
+# TODO: Update RSS Feed
