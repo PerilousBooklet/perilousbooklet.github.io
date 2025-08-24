@@ -54,6 +54,10 @@ for i in "${FILES_ALL[@]}"; do
 	if grep "__STYLE_TREEVIEW__" "$i"; then
 		replace "__STYLE_TREEVIEW__" "./public/components/style_treeview.html" "$i"
 	fi
+	# STYLE_POST
+	# if grep "__STYLE_POST__" "$i"; then
+	# 	replace "__STYLE_POST__" "./public/components/style_post.html" "$i"
+	# fi
 done
 
 # Generate table of contents for each blog post

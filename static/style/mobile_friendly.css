@@ -31,7 +31,21 @@
     flex-direction: column;
     align-items: center;
   }
-  /* BLOG */
+  /* TODO: BLOG */
+  .blog_post h1 { font-size: 1em;}
+  .blog_post h2 { font-size: 0.8em;}
+  .blog_post p,a {
+    line-height: 1.4;
+    font-size: 16q;
+  }
+  .toc h2 { font-size: 0.8em;}
+  .toc p {
+    font-size: 0.7em;
+  }
+  .toc a {
+    font-size: 0.7em;
+    line-height: 1.4;
+  }
   /* RECOMMENDED */
   .container_recommended_root {
     flex-direction: column;

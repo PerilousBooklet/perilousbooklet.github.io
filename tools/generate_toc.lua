@@ -58,7 +58,7 @@ local function generate_toc()
   local indentation = "        "
   table.insert(toc, "<!-- TABLE OF CONTENTS -->")
   table.insert(toc, indentation .. '<div class="toc">')
-  table.insert(toc, indentation .. "  <p><b>Table of Contents</b></p>")
+  table.insert(toc, indentation .. "  <h2>Table of Contents</h2>")
   table.insert(toc, indentation .. "  <ul>")
   for _, header in pairs(headers_raw) do
     -- Generate paragraph reference
@@ -90,7 +90,7 @@ local function generate_toc_style_code()
   table.insert(toc_style_code, "      /* Mobile-friendly style */")
   table.insert(toc_style_code, "      @media (max-width: 768px) {")
   for _,v in pairs(headers_raw) do
-    local line = string.lower("        #" .. string.gsub(v, " ", "-")) .. " {scroll-margin-top: 120px;}"
+    local line = string.lower("        #" .. string.gsub(v, " ", "-")) .. " {scroll-margin-top: 50px;}" -- Because of the reduced font size (mobile friendly)
     table.insert(toc_style_code, line)
   end
   table.insert(toc_style_code, "      }")
