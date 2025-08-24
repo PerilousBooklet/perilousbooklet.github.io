@@ -31,9 +31,12 @@
     flex-direction: column;
     align-items: center;
   }
-  /* TODO: BLOG */
+  /* BLOG */
   .blog_post h1 { font-size: 1em;}
   .blog_post h2 { font-size: 0.8em;}
+  .blog_post {
+    width: 380px;
+  }
   .blog_post p,a {
     line-height: 1.4;
     font-size: 16q;

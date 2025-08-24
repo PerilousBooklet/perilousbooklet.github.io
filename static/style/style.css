@@ -82,13 +82,16 @@ blockquote {
 }
 
 
+.blog_post {
+  width: 800px;
+}
 .blog_post p {
   line-height: 1.6;
-  font-size: 22q;
+  font-size: 20q;
 }
 .toc {
   min-width: 300px;
-  max-width: 700px;
+  max-width: 600px;
 }
 .toc h2 {
   font-size: 1.5em;
