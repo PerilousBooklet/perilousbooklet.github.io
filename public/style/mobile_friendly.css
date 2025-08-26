@@ -2,7 +2,7 @@
   /* NAVBAR */
   .navbar a {
     padding: 8px 10px;
-    font-size: 0.7em;
+    font-size: 0.4em;
   }
   /* HOME */
   .home {}
@@ -42,7 +42,7 @@
   .blog_post h1 { font-size: 1em;}
   .blog_post h2 { font-size: 0.8em;}
   .blog_post {
-    width: 380px;
+    width: 360px;
   }
   .blog_post p,a {
     line-height: 1.4;
