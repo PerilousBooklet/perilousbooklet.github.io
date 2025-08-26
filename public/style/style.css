@@ -24,6 +24,11 @@ blockquote {
 }
 
 
+.home {
+  font-size: 1em;
+}
+
+
 .centered {
   display: flex;
   align-items: center;

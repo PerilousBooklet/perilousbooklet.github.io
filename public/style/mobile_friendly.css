@@ -2,17 +2,24 @@
   /* NAVBAR */
   .navbar a {
     padding: 8px 10px;
-    font-size: 11px;
+    font-size: 0.7em;
   }
   /* HOME */
+  .home {}
+  .home a,p {
+    font-size: 1em;
+  }
   /* TODO: add close-in of image */
   /* CV */
+  .container_cv {
+    width: 350px;
+  }
+  .container_cv a,p {
+    font-size: 1em;
+  }
   /* FUTURE_TODO: fix zooming layout */
   .aligned_at_start {
     flex-wrap: wrap;
-  }
-  .container_cv {
-    width: 350px;
   }
   /* PROJECTS */
   /* FIX: redundant size rules */
