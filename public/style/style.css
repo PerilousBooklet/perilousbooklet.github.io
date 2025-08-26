@@ -65,7 +65,7 @@ blockquote {
 .navbar a {
   display: inline-block;
   color: #FFFFFF;
-  padding: 14px 20px;
+  padding: 12px 18px;
 }
 .navbar a:hover {
   background-color: #282c34;
@@ -88,7 +88,7 @@ blockquote {
 
 
 .blog_post {
-  width: 800px;
+  width: 700px;
 }
 .blog_post p {
   line-height: 1.6;
