@@ -17,6 +17,13 @@
   .container_cv a,p {
     font-size: 1em;
   }
+  /* PROJECTS */
+  .container_projects h3 {
+    font-size: 1em;
+  }
+  .container_projects p {
+    font-size: 0.7em;
+  }
   /* FUTURE_TODO: fix zooming layout */
   .aligned_at_start {
     flex-wrap: wrap;
