@@ -6,7 +6,7 @@
   }
   /* HOME */
   .home {}
-  .home a,p {
+  .home p,a {
     font-size: 11px;
   }
   /* TODO: add close-in of image */
@@ -14,7 +14,7 @@
   .container_cv {
     width: 350px;
   }
-  .container_cv a,p {
+  .container_cv p,a {
     font-size: 1em;
   }
   /* PROJECTS */
