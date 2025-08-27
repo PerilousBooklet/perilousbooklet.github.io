@@ -7,7 +7,7 @@
   /* HOME */
   .home {}
   .home p,a {
-    font-size: 11px;
+    font-size: 1em;
   }
   /* TODO: add close-in of image */
   /* CV */
