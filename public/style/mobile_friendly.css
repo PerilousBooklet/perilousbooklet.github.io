@@ -5,7 +5,9 @@
     font-size: 0.6em;
   }
   /* HOME */
-  .home {}
+  .home {
+    font-size: 1em;
+  }
   .home p,a {
     font-size: 1em;
   }
