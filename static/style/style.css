@@ -126,6 +126,8 @@ blockquote {
 
 .container_cv {
   width: 600px;
+}
+.container_cv p,a{
   font-size: 1em;
 }
 .container_skills {
