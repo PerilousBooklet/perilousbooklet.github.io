@@ -126,6 +126,7 @@ blockquote {
 
 .container_cv {
   width: 600px;
+  font-size: 1em;
 }
 .container_skills {
   display: flex;
@@ -261,6 +262,8 @@ blockquote {
   height: 910px;
   
   border-radius: 5px;
+
+  /* TODO: add vertical dynamic resize depending on content */
 }
 
 
