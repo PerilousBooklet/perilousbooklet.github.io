@@ -102,7 +102,7 @@ local function generate_toc_style_code()
 end
 
 
--- Generate the h2 IDs to be pasted into the h2 headers
+-- Generate the <h2> IDs to be pasted into the <h2> headers
 local function generate_h2_ids()
   local toc_ids = {}
   local id_start = ' id="'

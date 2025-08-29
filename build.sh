@@ -22,21 +22,21 @@ replace() {
 	sed -i "s|$1|$CONTENT_ESCAPED|g" "$3"
 }
 for i in "${FILES_ALL[@]}"; do
-	# HEADER1
-	if grep "__HEADER1__" "$i"; then
-		replace "__HEADER1__" "./public/components/header1.html" "$i"
+	# HEAD1
+	if grep "__HEAD1__" "$i"; then
+		replace "__HEAD1__" "./public/components/head1.html" "$i"
 	fi
-	# HEADER2
-	if grep "__HEADER2__" "$i"; then
-		replace "__HEADER2__" "./public/components/header2.html" "$i"
+	# HEAD2
+	if grep "__HEAD2__" "$i"; then
+		replace "__HEAD2__" "./public/components/head2.html" "$i"
 	fi
-	# HEADER3
-	if grep "__HEADER3__" "$i"; then
-		replace "__HEADER3__" "./public/components/header3.html" "$i"
+	# HEAD3
+	if grep "__HEAD3__" "$i"; then
+		replace "__HEAD3__" "./public/components/head3.html" "$i"
 	fi
-	# HEADER4
-	if grep "__HEADER4__" "$i"; then
-		replace "__HEADER4__" "./public/components/header4.html" "$i"
+	# HEAD4
+	if grep "__HEAD4__" "$i"; then
+		replace "__HEAD4__" "./public/components/head4.html" "$i"
 	fi
 	# NAVBAR_POST
 	if grep "__NAVBAR_POST__" "$i"; then
@@ -58,6 +58,14 @@ for i in "${FILES_ALL[@]}"; do
 	# if grep "__STYLE_POST__" "$i"; then
 	# 	replace "__STYLE_POST__" "./public/components/style_post.html" "$i"
 	# fi
+	# FOOTER1
+	if grep "_FOOTER1__" "$i"; then
+		replace "__FOOTER1__" "./public/components/footer1.html" "$i"
+	fi
+	# FOOTER2
+	if grep "_FOOTER2__" "$i"; then
+		replace "__FOOTER2__" "./public/components/footer2.html" "$i"
+	fi
 done
 
 # Generate table of contents for each blog post
@@ -68,3 +76,4 @@ for i in "${POSTS_ALL[@]}"; do
 done
 
 # TODO: Update RSS Feed
+
