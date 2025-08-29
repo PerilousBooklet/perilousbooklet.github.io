@@ -6,19 +6,19 @@
   }
   /* HOME */
   .home {
-    font-size: 1em;
+    /* font-size: 1em; */
   }
   .home p,a {
-    font-size: 1em;
+    /* font-size: 1em; */
   }
   /* TODO: add close-in of image */
   /* CV */
   .container_cv {
     width: 350px;
-    
+   /* font-size: 1em;  */
   }
   .container_cv p,a {
-    
+    /* font-size: 1em; */
   }
   /* PROJECTS */
   .container_projects h3 {
