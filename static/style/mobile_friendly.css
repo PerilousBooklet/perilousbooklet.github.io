@@ -1,37 +1,23 @@
 @media (max-width: 768px) {
-  /* NAVBAR */
+  
   .navbar a {
     padding: 8px 10px;
-    font-size: 0.6em;
+    font-size: 0.6rem;
   }
-  /* HOME */
-  .home {
-    /* font-size: 1em; */
-  }
-  .home p,a {
-    /* font-size: 1em; */
-  }
-  /* TODO: add close-in of image */
-  /* CV */
-  .container_cv {
-    width: 350px;
-   /* font-size: 1em;  */
-  }
-  .container_cv p,a {
-    /* font-size: 1em; */
-  }
-  /* PROJECTS */
-  .container_projects h3 {
-    font-size: 1em;
-  }
-  .container_projects p {
-    font-size: 0.7em;
-  }
-  /* FUTURE_TODO: fix zooming layout */
-  .aligned_at_start {
-    flex-wrap: wrap;
-  }
-  /* PROJECTS */
+  
+  
+  .home p { font-size: 0.8rem; }
+  .home a { font-size: 0.8rem; }
+  .home b { font-size: 0.8rem; }
+  
+  
+  .container_cv { width: 350px; }
+  .container_cv p { font-size: 0.8rem; }
+  .container_cv a { font-size: 0.8rem; }
+  
+  
+  .container_projects h3 { font-size: 1.0rem; }
+  .container_projects p { font-size: 0.7rem; }
   /* FIX: redundant size rules */
   .container_projects div {
     width: 350px;
@@ -43,36 +29,38 @@
     width: 350px;
     height: 200px;
   }
-  /* DEV */
+  
+  
+  /* FUTURE_TODO: fix zooming layout */
+  .aligned_at_start { flex-wrap: wrap; }
+  
+  
   .container_dev{
     flex-direction: column;
     align-items: center;
   }
-  /* BLOG */
-  .blog_post h1 { font-size: 1em;}
-  .blog_post h2 { font-size: 0.8em;}
-  .blog_post {
-    width: 340px;
-  }
+  
+  
+  .blog_post { width: 340px; }
+  .blog_post h1 { font-size: 1.3rem;}
+  .blog_post h2 { font-size: 1rem;}
   .blog_post p,a {
-    line-height: 1.4;
-    font-size: 16q;
+    line-height: 1.5;
+    font-size: 0.8rem;
   }
-  .toc h2 { font-size: 0.8em;}
-  .toc p {
-    font-size: 0.7em;
-  }
+  
+  .toc h2 { font-size: 1rem;}
+  .toc p { font-size: 0.8rem; }
   .toc a {
-    font-size: 0.7em;
-    line-height: 1.4;
+    line-height: 1.5;
+    font-size: 0.8rem;
   }
-  /* RECOMMENDED */
+  
+  
   .container_recommended_root {
     flex-direction: column;
     align-items: center;
   }
-  .container_recommended {
-    width: 350px;
-  }
-  /* TODO: LP */
+  .container_recommended { width: 350px; }
+  
 }
