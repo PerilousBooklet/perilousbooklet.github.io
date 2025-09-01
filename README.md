@@ -16,6 +16,9 @@ My personal website.
 
 <!-- WIP: create the learning platform prototype, HTML-generation scripts included -->
 
+> [!NOTE]
+> To navigate the tags in the blog posts section, please use your favourite browser's integrated search option, accessible with `ctrl+f`.
+
 ## How the site is structured
 
 The `static` folder contains the source code of the website (HTML/CSS/touch-of-JS from scratch, no frameworks).
