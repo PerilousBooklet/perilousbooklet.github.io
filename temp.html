@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #1a1d23;
+      font-family: Arial, sans-serif;
+    }
+    
+    .centered {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .pad-20 {
+      padding: 20px;
+    }
+    
+    .aligned_at_start {
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    /* Tree styles */
+    .tree {
+      list-style: none;
+      padding: 10px;
+      margin: 0;
+      color: #FFFFFF;
+    }
+    
+    .tree ul {
+      list-style: none;
+      padding-left: 20px;
+      margin: 0;
+    }
+    
+    .tree li {
+      margin: 5px 0;
+    }
+    
+    .tree summary {
+      cursor: pointer;
+      user-select: none;
+      padding: 5px;
+      border-radius: 3px;
+    }
+    
+    .tree summary:hover {
+      background-color: #2c313a;
+    }
+    
+    /* Leaf items (clickable) */
+    .tree-leaf {
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 3px;
+      transition: background-color 0.2s;
+    }
+    
+    .tree-leaf:hover {
+      background-color: #2c313a;
+    }
+    
+    .tree-leaf.active {
+      background-color: #3e4451;
+      font-weight: bold;
+    }
+    
+    /* Content area */
+    #content-area {
+      color: #FFFFFF;
+    }
+    
+    #content-area h1 {
+      margin-top: 0;
+    }
+    
+    #content-area h2 {
+      color: #61afef;
+      margin-top: 30px;
+    }
+    
+    #content-area p {
+      line-height: 1.6;
+      color: #abb2bf;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- NAVBAR (placeholder) -->
+  <nav style="background: #2c313a; height: 50px; margin-bottom: 20px;"></nav>
+  
+  <!-- CONTENT -->
+  <main class="centered pad-20" style="color: #FFFFFF;">
+    <div class="aligned_at_start">
+      
+      <!-- FILES/FOLDERS TREEVIEW -->
+      <div style="width: 400px; height: 800px; background: #21252B; padding: 0px; overflow-y: auto;">
+        <ul class="tree">
+          <li>
+            <details open>
+              <summary>Giant planets</summary>
+              <ul>
+                <li>
+                  <details open>
+                    <summary>Gas giants</summary>
+                    <ul>
+                      <li class="tree-leaf" data-content="jupiter">Jupiter</li>
+                      <li class="tree-leaf" data-content="saturn">Saturn</li>
+                    </ul>
+                  </details>
+                </li>
+                <li>
+                  <details open>
+                    <summary>Ice giants</summary>
+                    <ul>
+                      <li class="tree-leaf" data-content="uranus">Uranus</li>
+                      <li class="tree-leaf" data-content="neptune">Neptune</li>
+                    </ul>
+                  </details>
+                </li>
+                <li>
+                  <details open>
+                    <summary>Rocky planets</summary>
+                    <ul>
+                      <li class="tree-leaf" data-content="earth">Earth</li>
+                      <li class="tree-leaf" data-content="mars">Mars</li>
+                    </ul>
+                  </details>
+                </li>
+                <li>
+                  <details open>
+                    <summary>Dwarf planets</summary>
+                    <ul>
+                      <li class="tree-leaf" data-content="pluto">Pluto</li>
+                      <li class="tree-leaf" data-content="eris">Eris</li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- SPACER -->
+      <div style="width: 25px;"></div>
+      
+      <!-- CONTENT -->
+      <div id="content-area" style="width: 900px; height: 1800px; background: #21252B; padding: 20px; overflow-y: auto;">
+        <h1>Welcome to the Solar System Explorer</h1>
+        <p>Click on any planet in the tree view to learn more about it.</p>
+      </div>
+      
+      <!-- SPACER -->
+      <div style="width: 25px;"></div>
+      
+      <!-- CHAPTERS TREEVIEW -->
+      <div style="width: 400px; height: 800px; background: #21252B; padding: 20px;">
+        <h3 style="color: #FFFFFF; margin-top: 0;">Chapter Navigation</h3>
+        <div id="chapters-list" style="color: #abb2bf;"></div>
+      </div>
+      
+    </div>
+  </main>
+  
+  <script>
+    // Content data for each planet
+    const contentData = {
+      jupiter: {
+        title: 'Jupiter',
+        intro: 'The largest planet in our solar system',
+        sections: [
+          {
+            title: 'Overview',
+            content: 'Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined.'
+          },
+          {
+            title: 'Composition',
+            content: 'Jupiter is primarily composed of hydrogen and helium. It may have a rocky core of heavier elements, but like the other giant planets, Jupiter lacks a well-defined solid surface.'
+          },
+          {
+            title: 'Great Red Spot',
+            content: 'The Great Red Spot is a persistent high-pressure region in the atmosphere of Jupiter, producing an anticyclonic storm that is the largest in the Solar System.'
+          },
+          {
+            title: 'Moons',
+            content: 'Jupiter has 95 known moons, including the four large Galilean moons discovered by Galileo Galilei in 1610: Io, Europa, Ganymede, and Callisto.'
+          },
+          {
+            title: 'Exploration',
+            content: 'Jupiter has been explored by several spacecraft, including Pioneer 10 and 11, Voyager 1 and 2, Galileo, and most recently, Juno.'
+          }
+        ]
+      },
+      saturn: {
+        title: 'Saturn',
+        intro: 'The ringed planet and second largest in our solar system',
+        sections: [
+          {
+            title: 'Overview',
+            content: 'Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine times that of Earth.'
+          },
+          {
+            title: 'Ring System',
+            content: 'Saturn\'s ring system is the most extensive and complex in the Solar System, extending from 6,630 to 120,700 kilometers above Saturn\'s equator.'
+          },
+          {
+            title: 'Composition',
+            content: 'Like Jupiter, Saturn is mostly made of hydrogen and helium. The planet\'s interior is thought to consist of a rocky core surrounded by a deep layer of metallic hydrogen.'
+          },
+          {
+            title: 'Moons',
+            content: 'Saturn has 146 known moons, with Titan being the largest and the only moon in the Solar System with a substantial atmosphere.'
+          },
+          {
+            title: 'Exploration',
+            content: 'The Cassini-Huygens mission provided unprecedented data about Saturn, its rings, and its moons from 2004 to 2017.'
+          }
+        ]
+      },
+      uranus: {
+        title: 'Uranus',
+        intro: 'The tilted ice giant',
+        sections: [
+          {
+            title: 'Overview',
+            content: 'Uranus is the seventh planet from the Sun and has the third-largest planetary radius and fourth-largest planetary mass in the Solar System.'
+          },
+          {
+            title: 'Unique Tilt',
+            content: 'Uranus has an axial tilt of 98 degrees, meaning it essentially rolls on its side as it orbits the Sun. This gives it extreme seasonal variations.'
+          },
+          {
+            title: 'Composition',
+            content: 'Uranus is similar in composition to Neptune, and both have different bulk chemical composition from the larger gas giants Jupiter and Saturn.'
+          },
+          {
+            title: 'Moons and Rings',
+            content: 'Uranus has 27 known moons and a faint ring system that was discovered in 1977.'
+          },
+          {
+            title: 'Discovery',
+            content: 'Uranus was the first planet discovered with a telescope, found by William Herschel in 1781.'
+          }
+        ]
+      },
+      neptune: {
+        title: 'Neptune',
+        intro: 'The windiest planet in our solar system',
+        sections: [
+          {
+            title: 'Overview',
+            content: 'Neptune is the eighth and outermost major planet in the Solar System. It is the fourth-largest planet by diameter and third-largest by mass.'
+          },
+          {
+            title: 'Extreme Weather',
+            content: 'Neptune has the fastest winds in the Solar System, reaching speeds of up to 2,100 kilometers per hour.'
+          },
+          {
+            title: 'Composition',
+            content: 'Neptune\'s atmosphere is composed primarily of hydrogen and helium, with traces of methane that give the planet its striking blue color.'
+          },
+          {
+            title: 'Moons',
+            content: 'Neptune has 16 known moons, with Triton being by far the largest. Triton is unique as it orbits Neptune in a retrograde direction.'
+          },
+          {
+            title: 'Discovery',
+            content: 'Neptune was the first planet located through mathematical predictions rather than empirical observation, discovered in 1846.'
+          }
+        ]
+      },
+      earth: {
+        title: 'Earth',
+        intro: 'Our home planet',
+        sections: [
+          {
+            title: 'Overview',
+            content: 'Earth is the third planet from the Sun and the only astronomical object known to harbor life. About 71% of Earth\'s surface is covered with water.'
+          },
+          {
+            title: 'Atmosphere',
+            content: 'Earth\'s atmosphere consists of 78% nitrogen, 21% oxygen, and trace amounts of other gases. This composition is crucial for supporting life.'
+          },
+          {
+            title: 'Geology',
+            content: 'Earth has a dynamic geology with plate tectonics that continuously reshape its surface through volcanic activity and earthquakes.'
+          },
+          {
+            title: 'The Moon',
+            content: 'Earth has one natural satellite, the Moon, which is about one-quarter the diameter of Earth and affects our planet\'s tides.'
+          },
+          {
+            title: 'Life',
+            content: 'Earth is the only known planet with life, hosting millions of species including humans. Life has existed here for at least 3.5 billion years.'
+          }
+        ]
+      },
+      mars: {
+        title: 'Mars',
+        intro: 'The Red Planet',
+        sections: [
+          {
+            title: 'Overview',
+            content: 'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System. It\'s often called the "Red Planet" due to iron oxide on its surface.'
+          },
+          {
+            title: 'Surface Features',
+            content: 'Mars has the largest volcano in the Solar System, Olympus Mons, and the deepest canyon, Valles Marineris.'
+          },
+          {
+            title: 'Water on Mars',
+            content: 'Evidence suggests that Mars once had liquid water on its surface, and water ice exists at the polar ice caps and beneath the surface.'
+          },
+          {
+            title: 'Moons',
+            content: 'Mars has two small moons, Phobos and Deimos, which are thought to be captured asteroids.'
+          },
+          {
+            title: 'Exploration',
+            content: 'Mars has been extensively explored by robotic spacecraft, including rovers like Curiosity and Perseverance, searching for signs of past or present life.'
+          }
+        ]
+      },
+      pluto: {
+        title: 'Pluto',
+        intro: 'The most famous dwarf planet',
+        sections: [
+          {
+            title: 'Overview',
+            content: 'Pluto is a dwarf planet in the Kuiper belt, a ring of bodies beyond the orbit of Neptune. It was discovered in 1930 and was considered the ninth planet until 2006.'
+          },
+          {
+            title: 'Reclassification',
+            content: 'In 2006, the International Astronomical Union reclassified Pluto as a "dwarf planet" due to its inability to clear its orbital neighborhood.'
+          },
+          {
+            title: 'Composition',
+            content: 'Pluto is primarily made of rock and ice and is much smaller than the terrestrial planets. Its surface is composed mainly of nitrogen ice.'
+          },
+          {
+            title: 'Moons',
+            content: 'Pluto has five known moons, with Charon being the largest. Charon is so large relative to Pluto that some consider them a binary system.'
+          },
+          {
+            title: 'New Horizons',
+            content: 'The New Horizons spacecraft flew by Pluto in 2015, providing the first close-up images and detailed data about this distant world.'
+          }
+        ]
+      },
+      eris: {
+        title: 'Eris',
+        intro: 'The most massive known dwarf planet',
+        sections: [
+          {
+            title: 'Overview',
+            content: 'Eris is the most massive and second-largest known dwarf planet in the Solar System. It was discovered in 2005 and is located in the scattered disc.'
+          },
+          {
+            title: 'Discovery Impact',
+            content: 'The discovery of Eris led to the reclassification of Pluto as a dwarf planet, as it showed that many similar objects exist in the outer Solar System.'
+          },
+          {
+            title: 'Characteristics',
+            content: 'Eris is slightly smaller than Pluto but about 27% more massive. It has an extremely eccentric orbit that takes it far beyond the Kuiper belt.'
+          },
+          {
+            title: 'Moon',
+            content: 'Eris has one known moon, Dysnomia, which was discovered shortly after Eris itself.'
+          },
+          {
+            title: 'Distance',
+            content: 'Eris is currently one of the most distant known objects in the Solar System, about three times farther from the Sun than Pluto.'
+          }
+        ]
+      }
+    };
+    
+    // Function to generate content HTML
+    function generateContentHTML(data) {
+      let html = `<h1>${data.title}</h1>`;
+      html += `<p>${data.intro}</p>`;
+      html += '<hr style="border: 1px solid #3e4451; margin: 20px 0;">';
+      
+      data.sections.forEach((section, index) => {
+        html += `<h2 id="section-${index}">${section.title}</h2>`;
+        html += `<p>${section.content}</p>`;
+      });
+      
+      return html;
+    }
+    
+    // Function to generate chapters list
+    function generateChaptersList(data) {
+      let html = '<ul style="list-style: none; padding: 0;">';
+      
+      data.sections.forEach((section, index) => {
+        html += `<li style="margin: 10px 0;">`;
+        html += `<a href="#section-${index}" style="color: #61afef; text-decoration: none; display: block; padding: 5px; border-radius: 3px;" 
+                    onmouseover="this.style.backgroundColor='#2c313a'" 
+                    onmouseout="this.style.backgroundColor='transparent'">${section.title}</a>`;
+        html += `</li>`;
+      });
+      
+      html += '</ul>';
+      return html;
+    }
+    
+    // Get all leaf elements
+    const leafElements = document.querySelectorAll('.tree-leaf');
+    const contentArea = document.getElementById('content-area');
+    const chaptersList = document.getElementById('chapters-list');
+    
+    // Add click event listeners to all leaf elements
+    leafElements.forEach(leaf => {
+      leaf.addEventListener('click', function() {
+        // Remove active class from all leaves
+        leafElements.forEach(l => l.classList.remove('active'));
+        
+        // Add active class to clicked leaf
+        this.classList.add('active');
+        
+        // Get content key from data attribute
+        const contentKey = this.getAttribute('data-content');
+        
+        // Update content if data exists
+        if (contentData[contentKey]) {
+          contentArea.innerHTML = generateContentHTML(contentData[contentKey]);
+          chaptersList.innerHTML = generateChaptersList(contentData[contentKey]);
+          
+          // Scroll to top of content area
+          contentArea.scrollTop = 0;
+        }
+      });
+    });
+    
+    // Make chapter links smooth scroll
+    document.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A' && e.target.getAttribute('href').startsWith('#')) {
+        e.preventDefault();
+        const targetId = e.target.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  </script>
+  
+</body>
+</html>
