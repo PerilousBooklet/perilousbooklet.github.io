@@ -186,7 +186,7 @@ blockquote {
 }
 .container_recommended {
   max-width: 500px;
-  width: 400px;
+  width: 420px;
   word-wrap: break-word;
 }
 .container_recommended h2 { font-size: 1rem; }
