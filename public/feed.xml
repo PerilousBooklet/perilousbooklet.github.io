@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+
+<title>Raffaele Orabona</title>
+<description>My presence on the Internet.</description>
+<link>https://perilousbooklet.github.io</link>
+<ttl>1440</ttl> <!-- Allow refreshing the feed every 60*24=1440 minutes -->
+
+<item>
+  <title>Arch Linux is great</title>
+  <link>https://perilousbooklet.github.io/public/posts/2025/arch-linux-is-great.html</link>
+  <pubDate>10/03/2025</pubDate>
+</item>
+
+<item>
+  <title>A Simple Homelab</title>
+  <link>https://perilousbooklet.github.io/public/posts/2025/a-simple-homelab.html</link>
+  <pubDate>25/09/2025</pubDate>
+</item>
+
+</channel>
+
+</rss>

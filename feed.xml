@@ -2,22 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 
 <channel>
-  
-  <title>Raffaele Orabona</title>
-  <description>My presence on the Internet.</description>
-  <link>https://perilousbooklet.github.io</link>
-  <ttl>1440</ttl> <!-- Allow refreshing the feed every 60*24=1440 minutes -->
-  <!-- TODO: Generate timestamp with https://timestampgenerator.com/ -->
-  <!-- <lastBuildDate></lastBuildDate> -->
-  
-  <!-- ARTICLE 1 -->
-  <item>
-    <title>Arch Linux is Great</title>
-    <link>https://perilousbooklet.github.io/public/posts/2025/arch-linux-is-great.html</link>
-    <!-- TODO: Generate timestamp with https://timestampgenerator.com/ -->
-    <!-- <pubDate></pubDate> -->
-  </item>
-  
+
+<title>Raffaele Orabona</title>
+<description>My presence on the Internet.</description>
+<link>https://perilousbooklet.github.io</link>
+<ttl>1440</ttl> <!-- Allow refreshing the feed every 60*24=1440 minutes -->
+
+__ENTRIES__
 </channel>
 
 </rss>

@@ -1,3 +1,8 @@
+-----------------------------------
+-- TINY STATIC TEMPLATING ENGINE --
+-----------------------------------
+
+
 -- Specify the file name
 local filename = "code.txt"
 

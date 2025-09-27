@@ -1,42 +1,13 @@
 <!DOCTYPE html>
 <html>
   
-  <!-- HEADER -->
-  <head>
-    <title>Raffaele Orabona</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Icon -->
-    <!-- <link rel="icon" href="./assets/icon-white.svg" type="image/x-icon" /> -->
-    <!-- CSS -->
-    <link rel="stylesheet" href="../../style/style.css"></link>
-    <link rel="stylesheet" href="../../style/codeblock.css"></link>
-    <link rel="stylesheet" href="../../style/mobile_friendly.css"></link>
-    <!-- Javascript -->
-    <script src="../../lib/main.js"></script>
-  </head>
+  __HEAD3__
   
   <body>
     
-    <style>
-      #first-section-of-the-article {scroll-margin-top: 70px;}
-      #second-section-of-the-article {scroll-margin-top: 70px;}
-      /* Mobile-friendly style */
-      @media (max-width: 768px) {
-        #first-section-of-the-article {scroll-margin-top: 50px;}
-        #second-section-of-the-article {scroll-margin-top: 50px;}
-      }
-    </style>
+    __TABLE_OF_CONTENTS_STYLE__
     
-    <!-- NAVBAR -->
-    <div class="navbar text-white">
-      <a href="../../index.html">Home</a>
-      <a href="../../pages/cv.html">CV</a>
-      <a href="../../pages/tools.html">Tools</a>
-      <a href="../../pages/blog.html" class="active" >Blog</a>
-      <a href="../../pages/recommended.html">Recommended</a>
-      <!-- <a href="../../pages/lp.html">LP</a> -->
-    </div>
+    __NAVBAR_POST__
     
     <!-- CONTENT -->
     <div class="centered text-white">
@@ -45,21 +16,13 @@
         <!-- TITLE -->
         <br>
         <h1 style="color: #9acc76; text-align: center;">Example Article</h1>
-        <p style="font-style: italic; text-align: center;">30/04/2025</p>
+        <p id="pubdate" style="font-style: italic; text-align: center;">30/04/2025</p>
         <br>
         
-        <!-- TABLE OF CONTENTS -->
-        <div class="toc">
-          <h2>Table of Contents</h2>
-          <ul>
-            <li><a href="#first-section-of-the-article">First Section of the Article</a></li>
-            <li><a href="#second-section-of-the-article">Second Section of the Article</a></li>
-          </ul>
-        </div>
-        <br>
+        __TABLE_OF_CONTENTS__
         
         <!-- CONTENT -->
-        <h2 id="first-section-of-the-article" style="color: #5cb3fa;">First Section of the Article</h2>
+        <h2 style="color: #5cb3fa;">First Section of the Article</h2>
         <!-- EXAMPLE: PARAGRAPH -->
         <p>
           Here's some example text...
@@ -79,7 +42,7 @@
         
         <br>
         
-        <h2 id="second-section-of-the-article" style="color: #5cb3fa;">Second Section of the Article</h2>
+        <h2 style="color: #5cb3fa;">Second Section of the Article</h2>
         <p>
           Here's some example text...
         </p>

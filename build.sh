@@ -10,6 +10,7 @@ if [ ! -d ./public ]; then
 else
 	rm -vr ./public/*
 	cp -vr ./static/* ./public/
+	cp -v ./feed.xml ./public/feed.xml
 fi
 
 # Get list of files (use readarray to rearrange the data from `find` into proper bash array syntax)
@@ -34,25 +35,9 @@ for i in "${FILES_ALL[@]}"; do
 	if grep "__HEAD3__" "$i"; then
 		replace "__HEAD3__" "./public/components/head3.html" "$i"
 	fi
-	# HEAD4
-	if grep "__HEAD4__" "$i"; then
-		replace "__HEAD4__" "./public/components/head4.html" "$i"
-	fi
 	# NAVBAR_POST
 	if grep "__NAVBAR_POST__" "$i"; then
 		replace "__NAVBAR_POST__" "./public/components/navbar_post.html" "$i"
-	fi
-	# NAVBAR_COURSE
-	if grep "__NAVBAR_COURSE__" "$i"; then
-		replace "__NAVBAR_COURSE__" "./public/components/navbar_course.html" "$i"
-	fi
-	# NAVBAR_TOPIC
-	if grep "__NAVBAR_TOPIC__" "$i"; then
-		replace "__NAVBAR_TOPIC__" "./public/components/navbar_topic.html" "$i"
-	fi
-	# STYLE_TREEVIEW
-	if grep "__STYLE_TREEVIEW__" "$i"; then
-		replace "__STYLE_TREEVIEW__" "./public/components/style_treeview.html" "$i"
 	fi
 	# STYLE_POST
 	# if grep "__STYLE_POST__" "$i"; then
@@ -75,5 +60,6 @@ for i in "${POSTS_ALL[@]}"; do
 	echo -e "\e[32m[INFO]\e[0m: generated TOC for $i"
 done
 
-# TODO: Update RSS Feed
-
+# Update RSS Feed
+lua ./tools/generate_feed.lua ./public/posts
+echo -e "\e[32m[INFO]\e[0m: generated RSS feed"

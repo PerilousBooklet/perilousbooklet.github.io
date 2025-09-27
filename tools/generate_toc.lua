@@ -112,9 +112,8 @@ local function generate_h2_ids()
     local line = id_start .. string.lower(string.gsub(v, " ", "-")) .. id_end
     table.insert(toc_ids, line)
   end
-  -- ?
-  local lines = {}
   -- Read file
+  local lines = {}
   local file = io.open(file_path, "r+")
   for line in file:lines() do
     table.insert(lines, line)
