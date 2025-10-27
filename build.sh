@@ -10,7 +10,6 @@ if [ ! -d ./public ]; then
 else
 	rm -vr ./public/*
 	cp -vr ./static/* ./public/
-	cp -v ./feed.xml ./public/feed.xml
 fi
 
 # Get list of files (use readarray to rearrange the data from `find` into proper bash array syntax)
