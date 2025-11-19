@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      font: Cantarell;
+    }
+    body {
+      font-family: Cantarell;
+      margin: 0;
+      background: #282c34;
+    }
+    a {
+      color: #5cb3fa;
+      text-decoration: none;
+    }
+    a:visited { color: #FFFFFF; }
+    a:hover { color: #eb6772; }
+    a:active { color: #9acc76; }
+    blockquote {
+      font-style: italic;
+      margin: 1em 0;
+      padding-left: 20px;
+      border-left: 2px solid #ccc;
+    }
+    .navbar {
+      top: 0;
+      position: sticky;
+      position: -webkit-sticky;
+      overflow: hidden;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      background-color: #21252B;
+      z-index: 10;
+    }
+    .navbar a {
+      display: inline-block;
+      color: #FFFFFF;
+      padding: 14px 20px;
+    }
+    .navbar a:hover {
+      background-color: #282c34;
+      color: #FFFFFF;
+    }
+    .navbar a.active {
+      background-color: #282c34;
+      color: #FFFFFF;
+    }
+    summary,li {
+      user-select: none;
+    }
+    summary::before {
+      margin-right: 10px;
+      transition: transform 0.2s ease-in-out;
+    }
+    .tree {
+      --spacing: 1.5rem;
+      --radius: 10px;
+      margin: 20px;
+    }
+    .tree li {
+      display: block;
+      position: relative;
+    }
+    ul, li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 19q;
+    }
+    ul ul {
+      padding-left: 15px;
+    }
+    li {
+      line-height: 1.2;
+    }
+  </style>
+  
+  <body>
+    
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <a href="./" class="active">Home</a>
+      <a href="./">placeholder</a>
+    </div>
+    
+    <!-- CONTENT -->
+    <div style="display: flex; justify-content: center; color: white;">
+      
+      <div style="display: flex; align-items: flex-start; padding: 20px;">
+        
+        <!-- FILES/FOLDERS TREEVIEW -->
+        <!-- TODO: will eventually be generated with scripts (get list of files, get list of chapters (headers) of each file) -->
+        <!-- TODO: make the content div resize depending on its content -->
+        <!-- TAG: __TREEVIEW_TOPIC__ -->
+        <div style="width: 400px; height: 800px; background: #21252B; padding: 0px;">
+          <ul class="tree">
+            <li>
+              <details open>
+                <summary>Giant planets</summary>
+                <ul>
+                  <li>
+                    <details open>
+                      <summary>Gas giants</summary>
+                      <ul>
+                        <li>Jupiter</li>
+                        <li>Saturn</li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>
+                    <details open>
+                      <summary>Ice giants</summary>
+                      <ul>
+                        <li>Uranus</li>
+                        <li>Neptune</li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>
+                    <details open>
+                      <summary>Ice giants</summary>
+                      <ul>
+                        <li>Uranus</li>
+                        <li>Neptune</li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>
+                    <details open>
+                      <summary>Ice giants</summary>
+                      <ul>
+                        <li>Uranus</li>
+                        <li>Neptune</li>
+                      </ul>
+                    </details>
+                  </li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- SPACER -->
+        <div style="width: 25px;"></div>
+        
+        <!-- CONTENT -->
+        <div style="width: 900px; height: 1800px; background: #21252B; padding: 20px;">
+          <h1>Title</h1>
+          <p>brief intro</p>
+          <!-- TODO: some kind of separator ? -->
+          
+          <h2>Paragraph 1</h2>
+          <p>sdasda sdasd asdas das</p>
+          
+          <h2>Paragraph 2</h2>
+          <p>sdasda sdasd asdas das</p>
+          
+          <h2>Paragraph 3</h2>
+          <p>sdasda sdasd asdas das</p>
+          
+          <h2>Paragraph 4</h2>
+          <p>sdasda sdasd asdas das</p>
+          
+          <h2>Paragraph 5</h2>
+          <p>sdasda sdasd asdas das</p>
+          
+        </div>
+        
+        <!-- SPACER -->
+        <div style="width: 25px;"></div>
+        
+        <!-- CHAPTERS TREEVIEW -->
+        <!-- TODO: generate the ul>li chapters treeview -->
+        <!-- TODO: add background-color change on hover (like in navbar) -->
+        <!-- TAG: __TREEVIEW_CHAPTERS__ -->
+        <div style="width: 400px; height: 800px; background: #21252B; padding: 0px;">
+          <ul class="tree">
+            <li>
+              <details open>
+                <summary>Giant planets</summary>
+                <ul>
+                  <li>
+                    <details open>
+                      <summary>Gas giants</summary>
+                      <ul>
+                        <li>Jupiter</li>
+                        <li>Saturn</li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>
+                    <details open>
+                      <summary>Ice giants</summary>
+                      <ul>
+                        <li>Uranus</li>
+                        <li>Neptune</li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>
+                    <details open>
+                      <summary>Ice giants</summary>
+                      <ul>
+                        <li>Uranus</li>
+                        <li>Neptune</li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>
+                    <details open>
+                      <summary>Ice giants</summary>
+                      <ul>
+                        <li>Uranus</li>
+                        <li>Neptune</li>
+                      </ul>
+                    </details>
+                  </li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+  </body>
+  
+</html>
