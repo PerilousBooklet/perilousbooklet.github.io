@@ -6,7 +6,7 @@
 <title>Raffaele Orabona</title>
 <description>My presence on the Internet.</description>
 <link>https://perilousbooklet.github.io</link>
-<ttl>1440</ttl> <!-- Allow refreshing the feed every 60*24=1440 minutes -->
+<ttl>1440</ttl>
 
 <item>
   <title>Arch Linux is great</title>
@@ -17,7 +17,7 @@
 <item>
   <title>A Simple Homelab</title>
   <link>https://perilousbooklet.github.io/public/posts/2025/a-simple-homelab.html</link>
-  <pubDate>25/09/2025</pubDate>
+  <pubDate>14/12/2025</pubDate>
 </item>
 
 </channel>

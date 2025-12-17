@@ -16,7 +16,7 @@
         <!-- TITLE -->
         <br>
         <h1 style="color: #9acc76; text-align: center;">A Simple Homelab</h1>
-        <p id="pubdate" style="font-style: italic; text-align: center;">25/09/2025</p>
+        <p id="pubdate" style="font-style: italic; text-align: center;">14/12/2025</p>
         <br>
         
         __TABLE_OF_CONTENTS__
@@ -24,64 +24,113 @@
         <!-- CONTENT -->
         <h2 style="color: #5cb3fa;">Introduction</h2>
         <p>
-          In a world dominated by sprawling cloud infrastructure and over-engineered software services, the highest priority 
-          for most big tech companies is no longer to provide the best quality services for their customers, but to extract 
-          as much money as possible from them.
+          In a world dominated by sprawling cloud infrastructure and over-engineered software services, big tech companies 
+          have long since decided to betray their original good intentions (see Google's Don't Be Evil pledge) and no longer 
+          aim to provide the best quality services for their customers, but to isntead extract as much money as possible from them.
         </p>
         <p>
-          The choice of prioritizing profit over quality has permeated every field of software services, from Google allowing 
-          sponsored search results, to Youtube slowing itself down on web browsers and to the streaming services where my 
-          favourite content (that I paid for) could be taken down any day.
+          This profit-first mindset has seeped into nearly every corner of the digital landscape. From Google’s reliance on 
+          sponsored search results, to YouTube deliberately slowing performance on certain browsers, and even to streaming 
+          platforms where content I’ve paid for can vanish overnight, the pattern is unmistakable.
         </p>
         <p>
-          The consequences of this business approach are varied, but the one that hit me most strongly has been the decline
-          in the quality of the services. I find these practices rather unpleasant and I'd like to avoid services and products 
-          that employ them whenever possible. Fortunately, thanks to the open source community and thousands of passionate 
-          developers, there is a vast range of open source programs to explore and choose from.
+          The consequences of this approach are wide-ranging, but the one that strikes me most personally is the steady 
+          decline in service quality. These practices don't allow me to sleep soundly at night, and I prefer to avoid 
+          products and services that embrace them whenever possible. Thankfully, the open source community—powered by 
+          thousands of passionate developers—offers a refreshing alternative, with a vast ecosystem of programs that 
+          prioritize freedom and functionality over profit.
         </p>
         <p>
-          I admit these are not the only reasons that compel me to build my own miniature cloud.
-          As a passionate tinkerer and Linux user, I am fascinated by the prospect of setting up my own servers 
-          and running my own services.
+          Yet my motivation goes beyond frustration with big tech. As a passionte tinkerer and programmer, I’m drawn 
+          to the challenge and satisfaction of building my own miniature cloud. The idea of running my own servers and 
+          hosting my own services is not just practical, it’s exciting.
         </p>
         <p>
-          In the following paragraphs I'm going to explain my journey of self-hosting and the lessons I learned along the way.
+          With that in mind, the following paragraphs will detail my journey into self-hosting, the obstacles I encountered, 
+          and the lessons I learned along the way.
         </p>
         <br>
         
+        <h2 style="color: #5cb3fa;">Self-hosting Concepts</h2>
+        <p>
+          A miniature cloud can take as many forms as the imagination allows.
+          ... some examples here ...
+        </p>
+        <p>
+          In my case, I wanted something small but powerful, so I opted for a tiny rack, which is a miniature equivalent
+          of the standard, enterprise-class server racks that you find inside datacenters.
+          The model that I chose featured 8 1U slots, which is more that enough space for most users, even enthusiasts.
+          I must clarify that I am not interested, as others are, in the great speed that 10Gb/s networking equipment
+          allows, mostly because my computers still have the 1Gb/s LAN ports and the fact that I only have access to a 1Gb/s 
+          fiber connection at home. 
+        </p>
+        <p>
+          In all honesty though, even for downloading heavy games over a 100GBs in size, a full 100MB/s is more than enough. 
+          It's also nice not to have to worry about the significant heat and power draw typical of high-speed 
+          equipment like 10Gb/s switches.
+        </p>
+        <p>
+          ... brief overview of fundamental self-hosting concepts ...
+        </p>
+        <p>
+          1. 
+          2. 
+          3. 
+          4. 
+          5. 
+        </p>
+        <br>
+        
+        <!-- TODO: before pasting images here, REMEMBER to optimize them!!! -->
         <h2 style="color: #5cb3fa;">Hardware</h2>
         <p>
-          
+          ... brief overview/comment on how in recent years there has benn an explosion in the market of mini pcs and mini
+          servers, which are perfect for a small homelab at home, both in power and energy efficiency ...
+        </p>
+        <p>
+          1. switch + mini server + UPS
+          2. tiny rack + switch + a few mini servers + UPS
+          3. prod. servers
+            - es. an excellent choice are the mini servers from Icewhale (Zimaboard and Zimablade)
+            - es. any mini pc will do
         </p>
         <br>
         
-        <h2 style="color: #5cb3fa;">Infrastructure</h2>
+        <h2 style="color: #5cb3fa;">Operating System Stack</h2>
         <p>
-          ...
+          ... brief explanation of my choices in the software stack and why ...
         </p>
-        <br>
-        
-        <h2 style="color: #5cb3fa;">OS Stack</h2>
         <p>
-          ...
-        </p>
-        <br>
-        
-        <h2 style="color: #5cb3fa;">Self-hosting</h2>
-        <p>
-          ...
+          1. arch linux + ufw + fail2ban
+          1. mdadm (for manual RAID configuration)
+          2. bash scripts (for automating complex tasks)
+          3. ssh (to connect remotely to servers)
+          4. tmux + mynav (to manage multiple programs without containers)
+          5. docker compose + lazydocker (to host services)
         </p>
         <br>
         
         <h2 style="color: #5cb3fa;">Services</h2>
         <p>
-          ...
+          ... brief explanation of my needs for services, my preferred choices and why ...
+        </p>
+        <p>
+          base
+          1. simple data sync (syncthing)
+          2. simple rss feed (miniflux)
+          3. simple bookmark manager + web browser extension (linkding)
+          4. simple music streaming (navidrome)
+          5. simple movie/show streaming (jellyfin)
+          advanced
+          1. simple monitoring dashboard for docker containers over multiple servers (beszel)
+          2. simple hardware management dashboard (DumbAssets)
+          3. VPN (only when connecting to homelab from outside, es. with personal smartphone/laptop)
         </p>
         <br>
         
         <h2 style="color: #5cb3fa;">Conclusion</h2>
         <p>
-          ...
+          ?
         </p>
         <br>
         
