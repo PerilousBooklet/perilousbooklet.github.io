@@ -14,9 +14,7 @@ body {
 
 a {
   color: #5cb3fa;
-  text-decoration: none;
 }
-a:visited { color: #FFFFFF; }
 a:hover { color: #eb6772; }
 a:active { color: #9acc76; }
 
@@ -72,6 +70,7 @@ blockquote {
   color: #FFFFFF;
   padding: 12px 18px;
   font-size: 0.9rem;
+  text-decoration: none;
 }
 .navbar a:hover {
   background-color: #282c34;
@@ -93,17 +92,25 @@ blockquote {
 }
 
 
-.container_blog h2 { font-size: 1.5rem; }
-.blog_post { width: 800px; }
-.blog_post h1 { font-size: 1.8rem;}
-.blog_post h2 { font-size: 1.3rem;}
+.container_blog h2 {
+  font-size: 1.5rem;
+}
+
+.blog_post {
+  width: 800px;
+}
+.blog_post h2 {
+  font-size: 1.3rem;
+}
 .blog_post p {
   line-height: 1.6;
   font-size: 1rem;
 }
+
 .toc {
-  min-width: 300px;
-  max-width: 600px;
+  width: 800px;
+  margin: 0 auto;
+  text-align: left;
 }
 .toc h2 {
   font-size: 1rem;
@@ -143,6 +150,9 @@ blockquote {
   margin-bottom: 10px;
   border-radius: 5px;
   cursor: default;
+}
+.container_skill a {
+  text-decoration: none;
 }
 .container_skill_level {
   position: relative; 

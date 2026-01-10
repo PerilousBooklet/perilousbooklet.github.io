@@ -64,12 +64,11 @@ function generate_feed_entries(folder, files)
     -- extract title
     for _, line in ipairs(file_title_lines) do
     	if line:find("%<h1%s") then
-    	  -- print(line) -- raw line
     	  local title_temp_1 = string.match(line, "%>[%w%s]+%<")
+    	  -- FIX: string expected, got nil
     	  local title_temp_2 = string.gsub(title_temp_1, "%>", "")
     	  local title_temp_3 = string.gsub(title_temp_2, "%<", "")
     	  title = title_temp_3
-    	  -- print(title) -- clean title
     	end
     end
     

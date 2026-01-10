@@ -6,7 +6,7 @@
 local config = require "core.config"
 
 table.insert(config.ignore_files, "^.lite_project.lua")
-table.insert(config.ignore_files, "^public/")
+-- table.insert(config.ignore_files, "^public/")
 
 
 -- you can add some patterns to ignore files within the project

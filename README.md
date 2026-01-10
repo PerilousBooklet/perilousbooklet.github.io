@@ -27,16 +27,6 @@ The `public` folder is filled with generated code from a few templating scripts 
 
 <!-- TODO: fix RSS support -->
 
-## How to create a blog post
-
-(I use [emmet](https://emmet.io/) and custom HTML snippets saved in my text editor of choice to save time while writing posts in pure HTML/CSS)
-
-1. Create a new HTML file inside `./static/posts/current_year`
-2. Generate the base blog post template with `snpt-blog-base-article`
-3. Write the article (use the snippets to add images, videos, audios, blockquotes, codeblocks, ...)
-4. Generate the website with `./build.sh`
-6. Open the website with `./run.sh`
-
 ## Credits
 
 - [RSS icon](https://www.svgrepo.com/svg/25140/rss)

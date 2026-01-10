@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  
+  <!-- HEADER -->
+  <head>
+    <title>Raffaele Orabona</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Icon -->
+    <!-- <link rel="icon" href="./assets/icon-white.svg" type="image/x-icon" /> -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../style/style.css"></link>
+    <link rel="stylesheet" href="../../style/mobile_friendly.css"></link>
+    <!-- Javascript -->
+    <script src="../../lib/main.js"></script>
+  </head>
+  
+  <body>
+    
+    <style>
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        color: #5cb3fa;
+      }
+      li {
+        color: white;
+        line-height: 1.6;
+        font-size: 1rem;
+      }
+    </style>
+    
+    <!-- NAVBAR -->
+    <div class="navbar text-white">
+      <a href="../../index.html">Home</a>
+      <a href="../../pages/cv.html">CV</a>
+      <a href="../../pages/blog.html" class="active" >Blog</a>
+      <a href="../../pages/recommended.html">Recommended</a>
+    </div>
+    
+    <style>
+      #introduction {scroll-margin-top: 70px;}
+      #self-hosting-concepts {scroll-margin-top: 70px;}
+      #hardware {scroll-margin-top: 70px;}
+      #operating-system-stack {scroll-margin-top: 70px;}
+      #hosted-services {scroll-margin-top: 70px;}
+      #conclusion {scroll-margin-top: 70px;}
+      /* Mobile-friendly style */
+      @media (max-width: 768px) {
+        #introduction {scroll-margin-top: 50px;}
+        #self-hosting-concepts {scroll-margin-top: 50px;}
+        #hardware {scroll-margin-top: 50px;}
+        #operating-system-stack {scroll-margin-top: 50px;}
+        #hosted-services {scroll-margin-top: 50px;}
+        #conclusion {scroll-margin-top: 50px;}
+      }
+    </style>
+    
+    <br>
+    <h1 style="color: #9acc76; text-align: center;">A Simple Homelab</h1>
+    <p id="pubdate" style="font-style: italic; text-align: center;">04/01/2026</p>
+    <br>
+    
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#self-hosting-concepts">Self-hosting Concepts</a></li>
+        <li><a href="#hardware">Hardware</a></li>
+        <li><a href="#operating-system-stack">Operating System Stack</a></li>
+        <li><a href="#hosted-services">Hosted Services</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
+    </div>
+    <br>
+    
+    <div class="centered text-white">
+    	<div class="blog_post">
+        
+    	  <h2 id="introduction">Introduction</h2>
+      <p>In a world dominated by sprawling cloud infrastructure and over-engineered software services, big tech companies have long since decided to betray their original good intentions (see Google's Don't Be Evil pledge) and no longer aim to provide the best quality services for their customers, but to isntead extract as much money as possible from them.</p>
+      <p>This profit-first mindset has seeped into nearly every corner of the digital landscape. From Google’s reliance on sponsored search results, to YouTube deliberately slowing performance on certain browsers, and even to streaming platforms where content I’ve paid for can vanish overnight, the pattern is unmistakable.</p>
+      <p>The consequences of this approach range far and wide, but the one that strikes me most personally is the steady decline in service quality. I prefer to avoid products and services that are not made by users for users whenever I can. Thankfully, the open-source community, powered by thousands of passionate developers, offers a refreshing alternative, with a vast ecosystem of programs that prioritize freedom and functionality over profit.</p>
+      <p>There's also another reason why I chose to host my own services: as a passionate tinkerer and programmer, I’m drawn to the challenge and satisfaction of building my own miniature cloud. The idea of running my own servers and hosting my own services is both practical and exciting, not to mention it's extremely useful to train fundamental DevOps skills like managing remote connections with servers, infrastructure descriptions with git and containers with Docker.</p>
+      <p>With that in mind, the following paragraphs will detail my journey into self-hosting, the obstacles I encountered, and the lessons I learned along the way.</p>
+      <h2 id="self-hosting-concepts">Self-hosting Concepts</h2>
+      <p>... brief overview of fundamental self-hosting concepts ...</p>
+      <ul>
+      <li><ol type="1">
+      <li></li>
+      </ol></li>
+      <li><ol start="2" type="1">
+      <li></li>
+      </ol></li>
+      <li><ol start="3" type="1">
+      <li></li>
+      </ol></li>
+      <li><ol start="4" type="1">
+      <li></li>
+      </ol></li>
+      <li><ol start="5" type="1">
+      <li></li>
+      </ol></li>
+      <li><ol start="6" type="1">
+      <li></li>
+      </ol></li>
+      </ul>
+      <h2 id="hardware">Hardware</h2>
+      <p>In recent years there has been an explosion in the availability of low-cost, relatively powerful mini pcs and mini servers. Add the pieces of small networking equipment (like routers and switches) that were already widely available and the newly released tiny racks from DeskPi (or any existing 10inch networking rack or 3d-printed chassis) and you will find that you have all the pieces of hardware necessary to build your own personal cloud at home.</p>
+      <p>A miniature personal cloud can take as many forms as the imagination allows, especially with modern 3d printing capabilities. You could get away with something as little as a Zimaboard with a couple of drives or build a full-fledged tiny server rack with an 8-node cluster, a UPS and patch panels.</p>
+      <p>In my case, I wanted something small but spacious, so I opted for the <a href="https://deskpi.com/products/deskpi-rackmate-t1-2">Deskmate T1</a> tiny rack from DeskPi, which is a miniature equivalent of the standard server racks that you find inside datacenters. The model that I chose featured 8 1U slots, which is plenty enough space for several mini servers.</p>
+      <p>Since I don't need high speed networking equipment, I bought a small 8-port 1Gb/s switch and a couple of <a href="https://deskpi.com/products/deskpi-rackmate-accessory-10-inch-network-switch">12-port patch panel</a> to organize the LAN cables.</p>
+      <p>I also bought a couple 10inch PDUs (power delivery units) to cleanly organize the power cables. I wanted to buy a 10inch 1U UPS as well, but it at the time (and even at the time of this writing) there were none available (or even existing probalby), so for the moment I'm using the UPS that I already had.</p>
+      <h2 id="operating-system-stack">Operating System Stack</h2>
+      <p>With regards to the choice of operating system and software stack to run on the servers, my choice was mostly influenced by the need to be able to do the least maintenance while keeping the systems as secure and reliable as possible. Arch Linux is a great choice for this use case (provided you know what you're doing!).</p>
+      <p>I chose Arch Linux as the server operating system of choice (all my servers have x86_64 CPUs, so the support is excellent), mostly because I've been using it for three years and I've learned how to keep it reliable and predictable (also <a href="https://wiki.archlinux.org/title/Frequently_asked_questions#Is_Arch_designed_to_be_used_as_a_server?_A_desktop?_A_workstation?">the Arch Linux website runs on Arch Linux</a>).</p>
+      <p>A fresh server install features at most four hundred packages, of which most are base system packages, so the maintenance is effectively seamless (with the occasional exceptions).</p>
+      <p>I chose Docker to handle my services , mostly because it's the industry standard for containerization and it's fairly easy to use, especially with Docker Compose. For those that don't know, Docker Compose allows you to describe the configuration for one or more containers in a few text files and to perform actions (like start, stop, remove and so on) on all of them at the same time. This is particularly useful for services made of several containers that work together...</p>
+      <ul>
+      <li><ol type="1">
+      <li>arch linux + ufw + fail2ban</li>
+      </ol></li>
+      <li><ol start="2" type="1">
+      <li>mdadm (for manual RAID configuration)</li>
+      </ol></li>
+      <li><ol start="3" type="1">
+      <li>bash scripts (for automating complex tasks)</li>
+      </ol></li>
+      <li><ol start="4" type="1">
+      <li>ssh (to connect remotely to servers)</li>
+      </ol></li>
+      <li><ol start="5" type="1">
+      <li>tmux + mynav (to manage multiple programs without containers)</li>
+      </ol></li>
+      <li><ol start="6" type="1">
+      <li>docker compose + lazydocker (to host services)</li>
+      </ol></li>
+      </ul>
+      <h2 id="hosted-services">Hosted Services</h2>
+      <p>... brief explanation of my needs for services, my preferred choices and why ...</p>
+      <p>base</p>
+      <ul>
+      <li><ol type="1">
+      <li>simple data sync (syncthing)</li>
+      </ol></li>
+      <li><ol start="2" type="1">
+      <li>simple rss feed (miniflux)</li>
+      </ol></li>
+      <li><ol start="3" type="1">
+      <li>simple bookmark manager + web browser extension (linkding)</li>
+      </ol></li>
+      <li><ol start="4" type="1">
+      <li>simple music streaming (navidrome)</li>
+      </ol></li>
+      <li><ol start="5" type="1">
+      <li>simple movie/show streaming (jellyfin)</li>
+      </ol></li>
+      </ul>
+      <p>advanced</p>
+      <ul>
+      <li><ol type="1">
+      <li>simple monitoring dashboard for docker containers over multiple servers (beszel)</li>
+      </ol></li>
+      <li><ol start="2" type="1">
+      <li>simple hardware management dashboard (DumbAssets)</li>
+      </ol></li>
+      <li><ol start="3" type="1">
+      <li>VPN (only when connecting to homelab from outside, es. with personal smartphone/laptop)</li>
+      </ol></li>
+      <li><ol start="4" type="1">
+      <li>mail server</li>
+      </ol></li>
+      <li><ol start="5" type="1">
+      <li>git platform</li>
+      </ol></li>
+      </ul>
+      <h2 id="conclusion">Conclusion</h2>
+      <p>?</p>
+    	  
+    	</div>
+    </div>
+  	
+  </body>
+  
+</html>
