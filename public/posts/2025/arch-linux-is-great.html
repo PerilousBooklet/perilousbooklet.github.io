@@ -35,6 +35,7 @@
     <div class="navbar text-white">
       <a href="../../index.html">Home</a>
       <a href="../../pages/cv.html">CV</a>
+      <a href="../../pages/projects.html">Projects</a>
       <a href="../../pages/blog.html" class="active" >Blog</a>
       <a href="../../pages/recommended.html">Recommended</a>
     </div>
@@ -92,14 +93,14 @@
       <p>So, what is it that makes Arch Linux great?</p>
       <p>It's a combination of several factors:</p>
       <ul>
-      <li><strong>DIY</strong>: wether you use the manual install process or not, Arch can be customized almost completely, from the display server and the user interface to all kinds of automated scripts and programs. This is ideal when custom workflows are required.</li>
-      <li><strong>KISS</strong>: the first principle of the <a href="https://wiki.archlinux.org/title/Arch_Linux#Principles">Arch philosophy</a> is simplicity. Arch itself is designed to be as simple as possible: from the package manager usage and configuration to the <a href="https://archlinux.org/">website</a> and <a href="https://wiki.archlinux.org/title/Main_page">documentation</a>, the developers chose a minimal, intuitive and clear design that emphasizes readability and consistency.</li>
-      <li><strong>Pacman</strong>: <a href="https://wiki.archlinux.org/title/Pacman">Arch's package manager</a> is the focus of the system's greatness. Adding, removing, <a href="https://archlinux.org/packages/">querying packages</a> and managing custom repositories is a breeze thanks to its concise syntax and easily readable configuration files. There's just one thing to be careful of when managing packages on Arch Linux: the official way of updating packages (which guarantees the intended level of stability) requires that all packages be updated at once, and every time you want to install a new package you also update all other packages.</li>
-      <li><strong>Rolling Release</strong>: Arch Linux is a rolling release distribution. This is one of the most important reasons for its greatness: the system's update management must be done incrementally, ideally every week, so there are never huge lists of conflicts and incompatibilites to solve every time there's an update, even with hundreds of packages installed at the same time (speaking from experience).</li>
-      <li><strong>Arch Build System</strong>: another great feature of Arch is its package build system. ABS (<strong>A</strong>rch <strong>B</strong>uild <strong>S</strong>ystem) is a collection of tools for compiling source code into compressed archived packages. These packages are defined each by a single, simple text file (here's the <a href="https://gitlab.archlinux.org/archlinux/packaging/packages/lite-xl/-/blob/main/PKGBUILD?ref_type=heads">PKGBUILD for Lite XL</a> as an example). The example provided above is relatively simple, but a PKGBUILD can do much more than just fetch source code and run build commands: from <a href="https://wiki.archlinux.org/title/Patching_packages">applying patches</a> to running update scripts, whatever your use case is, most likely ABS has got you covered.</li>
-      <li><strong>Arch Wiki</strong>: built on top of the popular <a href="https://www.mediawiki.org/wiki/MediaWiki">MediaWiki</a>, Arch's documentation website has been regarded as the best linux documentation for years; even users from other distributions use it! Its strong points are the great number of maintainers, the clear and quick interface (it's the same one that Wikipedia uses) and the reputation of reliability it has built over the years.</li>
-      <li><strong>Community</strong>: the Arch community is vast and rich. Whenever the ArchWiki isn't enough to solve a problem, the Arch Forums can be a vast source of past questions and answers. Just remember to do all the research you can before asking for help, as the people who answer on the forums dedicate their free time to do it.</li>
-      <li><strong>Professional Work Culture</strong>: in the recent wake of many open source projects involving themselves with unrelated politics, the Arch Linux team still believes that a technical project should remain focused on creating and maintaining a great product.</li>
+      <li>DIY: wether you use the manual install process or not, Arch can be customized almost completely, from the display server and the user interface to all kinds of automated scripts and programs. This is ideal when custom workflows are required.</li>
+      <li>KISS: the first principle of the <a href="https://wiki.archlinux.org/title/Arch_Linux#Principles">Arch philosophy</a> is simplicity. Arch itself is designed to be as simple as possible: from the package manager usage and configuration to the <a href="https://archlinux.org/">website</a> and <a href="https://wiki.archlinux.org/title/Main_page">documentation</a>, the developers chose a minimal, intuitive and clear design that emphasizes readability and consistency.</li>
+      <li>Pacman: <a href="https://wiki.archlinux.org/title/Pacman">Arch's package manager</a> is the focus of the system's greatness. Adding, removing, <a href="https://archlinux.org/packages/">querying packages</a> and managing custom repositories is a breeze thanks to its concise syntax and easily readable configuration files. There's just one thing to be careful of when managing packages on Arch Linux: the official way of updating packages (which guarantees the intended level of stability) requires that all packages be updated at once, and every time you want to install a new package you also update all other packages.</li>
+      <li>Rolling Release: Arch Linux is a rolling release distribution. This is one of the most important reasons for its greatness: the system's update management must be done incrementally, ideally every week, so there are never huge lists of conflicts and incompatibilites to solve every time there's an update, even with hundreds of packages installed at the same time (speaking from experience).</li>
+      <li>Arch Build System: another great feature of Arch is its package build system. ABS (Arch Build System) is a collection of tools for compiling source code into compressed archived packages. These packages are defined each by a single, simple text file (here's the <a href="https://gitlab.archlinux.org/archlinux/packaging/packages/lite-xl/-/blob/main/PKGBUILD?ref_type=heads">PKGBUILD for Lite XL</a> as an example). The example provided above is relatively simple, but a PKGBUILD can do much more than just fetch source code and run build commands: from <a href="https://wiki.archlinux.org/title/Patching_packages">applying patches</a> to running update scripts, whatever your use case is, most likely ABS has got you covered.</li>
+      <li>Arch Wiki: built on top of the popular <a href="https://www.mediawiki.org/wiki/MediaWiki">MediaWiki</a>, Arch's documentation website has been regarded as the best linux documentation for years; even users from other distributions use it! Its strong points are the great number of maintainers, the clear and quick interface (it's the same one that Wikipedia uses) and the reputation of reliability it has built over the years.</li>
+      <li>Community: the Arch community is vast and rich. Whenever the ArchWiki isn't enough to solve a problem, the Arch Forums can be a vast source of past questions and answers. Just remember to do all the research you can before asking for help, as the people who answer on the forums dedicate their free time to do it.</li>
+      <li>Professional Work Culture: in the recent wake of many open source projects involving themselves with unrelated politics, the Arch Linux team still believes that a technical project should remain focused on creating and maintaining a great product.</li>
       </ul>
       <h2 id="the-aur">The AUR</h2>
       <p>The <a href="https://aur.archlinux.org/">Arch User Repository</a> is a community-driven repository of user-produced content, where anyone can upload a package (as long as it's not for personal use only) or assume responsibility for maintaining one that was abandoned.</p> Whenever a package is not available in the official Arch repositories, it's very likely that you can find it in the AUR.</p>
@@ -111,7 +112,23 @@
     	  
     	</div>
     </div>
-  	
+
+    <br>
+    
+    <!-- FOOTER -->
+  <footer style="display: flex; align-items: center; justify-content: center; padding: 10px;">
+    <!-- TODO: add copyright disclaimer -->
+    <!-- <p style="font-size: 1em;">© 2025 Raffaele Orabona all rights reserved.</p> -->
+    <!-- SPACER -->
+    <!-- <div style="width: 20px;"></div> -->
+    <!-- BRAINMADE MARK -->
+    <a href="https://brainmade.org/" target="_blank"><img src="../../assets/brainmade-logo-white.svg" alt="brainmade" style="width: 100px;"></a>
+    <!-- SPACER -->
+    <div style="width: 20px;"></div>
+    <!-- RSS FEED -->
+    <a href="../feed.xml"><img src="../../assets/rss.svg" alt="rss" style="width:20px; fill: #FFFFFF;"></a>
+  </footer>
+    
   </body>
   
 </html>

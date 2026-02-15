@@ -35,6 +35,7 @@
     <div class="navbar text-white">
       <a href="../../index.html">Home</a>
       <a href="../../pages/cv.html">CV</a>
+      <a href="../../pages/projects.html">Projects</a>
       <a href="../../pages/blog.html" class="active" >Blog</a>
       <a href="../../pages/recommended.html">Recommended</a>
     </div>
@@ -59,7 +60,7 @@
     
     <br>
     <h1 style="color: #9acc76; text-align: center;">A Simple Homelab</h1>
-    <p id="pubdate" style="font-style: italic; text-align: center;">04/01/2026</p>
+    <p id="pubdate" style="font-style: italic; text-align: center;">15/02/2026</p>
     <br>
     
     <!-- TABLE OF CONTENTS -->
@@ -86,102 +87,61 @@
       <p>There's also another reason why I chose to host my own services: as a passionate tinkerer and programmer, I’m drawn to the challenge and satisfaction of building my own miniature cloud. The idea of running my own servers and hosting my own services is both practical and exciting, not to mention it's extremely useful to train fundamental DevOps skills like managing remote connections with servers, infrastructure descriptions with git and containers with Docker.</p>
       <p>With that in mind, the following paragraphs will detail my journey into self-hosting, the obstacles I encountered, and the lessons I learned along the way.</p>
       <h2 id="self-hosting-concepts">Self-hosting Concepts</h2>
-      <p>... brief overview of fundamental self-hosting concepts ...</p>
-      <ul>
-      <li><ol type="1">
-      <li></li>
-      </ol></li>
-      <li><ol start="2" type="1">
-      <li></li>
-      </ol></li>
-      <li><ol start="3" type="1">
-      <li></li>
-      </ol></li>
-      <li><ol start="4" type="1">
-      <li></li>
-      </ol></li>
-      <li><ol start="5" type="1">
-      <li></li>
-      </ol></li>
-      <li><ol start="6" type="1">
-      <li></li>
-      </ol></li>
-      </ul>
+      <p>There are a few steps to consider carefully before starting to procure the hardware for a homelab.</p>
+      <p>To begin with, you have to choose the size of the homelab. The two standard sizes are 19inch and 10inch, respectively for enterprise-class server racks and smaller networking racks that you can find in offices.</p>
+      <p>Next is the choice of hardware: enterprise-class servers can consume hundreds of watts of power so they may not be the ideal choice for a homelab; fortunately there are also much smaller and energy-efficient solutions, namely mini servers and mini pcs.</p>
+      <p>Then comes the choice of the software stack: the operating system, the security programs like the firewall and programs to analyze the incoming traffic for suspicious activity, the program that manages the services that run on the servers and the program to remotely connect to the servers to maintain and update them.</p>
+      <p>Finally, we have to choose which services to run. Fortunately for us normal citizens, decades of open source software development have produced a vast selection of programs that are free to use and modify.</p>
+      <p>It should be noted that some basic knowledge of networks is required to properly and securely manage a homelab, like configuring firewalls, managing services and securing credentials.</p>
       <h2 id="hardware">Hardware</h2>
       <p>In recent years there has been an explosion in the availability of low-cost, relatively powerful mini pcs and mini servers. Add the pieces of small networking equipment (like routers and switches) that were already widely available and the newly released tiny racks from DeskPi (or any existing 10inch networking rack or 3d-printed chassis) and you will find that you have all the pieces of hardware necessary to build your own personal cloud at home.</p>
       <p>A miniature personal cloud can take as many forms as the imagination allows, especially with modern 3d printing capabilities. You could get away with something as little as a Zimaboard with a couple of drives or build a full-fledged tiny server rack with an 8-node cluster, a UPS and patch panels.</p>
-      <p>In my case, I wanted something small but spacious, so I opted for the <a href="https://deskpi.com/products/deskpi-rackmate-t1-2">Deskmate T1</a> tiny rack from DeskPi, which is a miniature equivalent of the standard server racks that you find inside datacenters. The model that I chose featured 8 1U slots, which is plenty enough space for several mini servers.</p>
-      <p>Since I don't need high speed networking equipment, I bought a small 8-port 1Gb/s switch and a couple of <a href="https://deskpi.com/products/deskpi-rackmate-accessory-10-inch-network-switch">12-port patch panel</a> to organize the LAN cables.</p>
-      <p>I also bought a couple 10inch PDUs (power delivery units) to cleanly organize the power cables. I wanted to buy a 10inch 1U UPS as well, but it at the time (and even at the time of this writing) there were none available (or even existing probalby), so for the moment I'm using the UPS that I already had.</p>
+      <p>In my case, I wanted something small but spacious, so I opted for the <a href="https://deskpi.com/products/deskpi-rackmate-t1-2">Deskmate T1</a> tiny rack from DeskPi, which is the miniature equivalent of a standard server racks that you find inside datacenters. The model that I chose featured 8 1U slots, which is plenty enough space for several mini servers.</p>
+      <p>Since I don't need high speed networking equipment, I bought a small 8-port 1Gb/s switch and a couple of <a href="https://deskpi.com/products/deskpi-rackmate-accessory-10-inch-network-switch">12-port patch panel</a>s to organize the LAN cables.</p>
+      <p>I also bought a couple 10inch PDUs (power delivery units) to cleanly organize the power cables. I wanted to buy a 10inch 1U UPS as well, but at the time (and even at the time of this writing) there were none available (or even existing probably), so for now I'm using the UPS that I already have.</p>
       <h2 id="operating-system-stack">Operating System Stack</h2>
       <p>With regards to the choice of operating system and software stack to run on the servers, my choice was mostly influenced by the need to be able to do the least maintenance while keeping the systems as secure and reliable as possible. Arch Linux is a great choice for this use case (provided you know what you're doing!).</p>
-      <p>I chose Arch Linux as the server operating system of choice (all my servers have x86_64 CPUs, so the support is excellent), mostly because I've been using it for three years and I've learned how to keep it reliable and predictable (also <a href="https://wiki.archlinux.org/title/Frequently_asked_questions#Is_Arch_designed_to_be_used_as_a_server?_A_desktop?_A_workstation?">the Arch Linux website runs on Arch Linux</a>).</p>
-      <p>A fresh server install features at most four hundred packages, of which most are base system packages, so the maintenance is effectively seamless (with the occasional exceptions).</p>
-      <p>I chose Docker to handle my services , mostly because it's the industry standard for containerization and it's fairly easy to use, especially with Docker Compose. For those that don't know, Docker Compose allows you to describe the configuration for one or more containers in a few text files and to perform actions (like start, stop, remove and so on) on all of them at the same time. This is particularly useful for services made of several containers that work together...</p>
+      <p>I chose Arch Linux as the server operating system of choice (all my servers have x86_64 CPUs, so the support is excellent), mostly because I've been using it for three years and I've learned how to keep it reliable and predictable (see how <a href="https://wiki.archlinux.org/title/Frequently_asked_questions#Is_Arch_designed_to_be_used_as_a_server?_A_desktop?_A_workstation?">the Arch Linux website runs on Arch Linux</a>).</p>
+      <p>A fresh server install features at most four hundred packages, of which most are base system packages, so the maintenance is seamless (with the occasional exceptions).</p>
+      <p>I chose Docker to handle my services, mostly because it's the industry standard for containerization and it's fairly easy to use, especially with Docker Compose. For those that don't know, Docker Compose allows you to describe the configuration for one or more containers in a single text file and to perform actions (like start, stop, remove and so on) on all of them at the same time. This is particularly useful for services made of several containers that work together...</p>
       <ul>
-      <li><ol type="1">
       <li>arch linux + ufw + fail2ban</li>
-      </ol></li>
-      <li><ol start="2" type="1">
       <li>mdadm (for manual RAID configuration)</li>
-      </ol></li>
-      <li><ol start="3" type="1">
       <li>bash scripts (for automating complex tasks)</li>
-      </ol></li>
-      <li><ol start="4" type="1">
       <li>ssh (to connect remotely to servers)</li>
-      </ol></li>
-      <li><ol start="5" type="1">
       <li>tmux + mynav (to manage multiple programs without containers)</li>
-      </ol></li>
-      <li><ol start="6" type="1">
       <li>docker compose + lazydocker (to host services)</li>
-      </ol></li>
       </ul>
       <h2 id="hosted-services">Hosted Services</h2>
-      <p>... brief explanation of my needs for services, my preferred choices and why ...</p>
-      <p>base</p>
-      <ul>
-      <li><ol type="1">
-      <li>simple data sync (syncthing)</li>
-      </ol></li>
-      <li><ol start="2" type="1">
-      <li>simple rss feed (miniflux)</li>
-      </ol></li>
-      <li><ol start="3" type="1">
-      <li>simple bookmark manager + web browser extension (linkding)</li>
-      </ol></li>
-      <li><ol start="4" type="1">
-      <li>simple music streaming (navidrome)</li>
-      </ol></li>
-      <li><ol start="5" type="1">
-      <li>simple movie/show streaming (jellyfin)</li>
-      </ol></li>
-      </ul>
-      <p>advanced</p>
-      <ul>
-      <li><ol type="1">
-      <li>simple monitoring dashboard for docker containers over multiple servers (beszel)</li>
-      </ol></li>
-      <li><ol start="2" type="1">
-      <li>simple hardware management dashboard (DumbAssets)</li>
-      </ol></li>
-      <li><ol start="3" type="1">
-      <li>VPN (only when connecting to homelab from outside, es. with personal smartphone/laptop)</li>
-      </ol></li>
-      <li><ol start="4" type="1">
-      <li>mail server</li>
-      </ol></li>
-      <li><ol start="5" type="1">
-      <li>git platform</li>
-      </ol></li>
-      </ul>
+      <p>The next step is figuring out which services to host. Depending on your needs you may have to host from a few to dozens of services. In my case, I only need a few.</p>
+      <p>The first and most important is a service to aggregate news, for which I chose the minimal and simple <a href="https://miniflux.app/">miniflux</a>.</p>
+      <p>The second is a bookmark manager, since my web browser's toolbar is drowning in stray bookmarks: I chose the simple and minimal <a href="https://linkding.link/">linkding</a>.</p>
+      <p>Lastly, to host my media library I chose the popular (and probably the only one that is good enough) media server <a href="https://jellyfin.org/">jellyfin</a>.</p>
       <h2 id="conclusion">Conclusion</h2>
-      <p>?</p>
+      <p>If you've read this far, you're probably already considering how to build your own homelab.</p>
+      <p>My advice is to start smaller than you think you need to. A single mini PC or mini server running a few Docker containers is enough to learn the fundamentals and decide if self-hosting is something you can maintain comfortably in the long term.</p>
+      <p>Also, since countless users in the open-source community have created comprehensive documentation, helpful forum discussions and innumerable guides for every imaginable service, the barrier to entry has never been lower, and the alternatives to big tech's walled gardens have never been more mature.</p>
+      <p>Your personal cloud awaits, all it takes is that first step.</p>
     	  
     	</div>
     </div>
-  	
+
+    <br>
+    
+    <!-- FOOTER -->
+  <footer style="display: flex; align-items: center; justify-content: center; padding: 10px;">
+    <!-- TODO: add copyright disclaimer -->
+    <!-- <p style="font-size: 1em;">© 2025 Raffaele Orabona all rights reserved.</p> -->
+    <!-- SPACER -->
+    <!-- <div style="width: 20px;"></div> -->
+    <!-- BRAINMADE MARK -->
+    <a href="https://brainmade.org/" target="_blank"><img src="../../assets/brainmade-logo-white.svg" alt="brainmade" style="width: 100px;"></a>
+    <!-- SPACER -->
+    <div style="width: 20px;"></div>
+    <!-- RSS FEED -->
+    <a href="../feed.xml"><img src="../../assets/rss.svg" alt="rss" style="width:20px; fill: #FFFFFF;"></a>
+  </footer>
+    
   </body>
   
 </html>

@@ -1,8 +1,10 @@
 #!/bin/bash
 
+
 ###################################
 ## Tiny Static Templating Script ##
 ###################################
+
 
 # Copy `static` source code into `public` folder
 if [ ! -d ./public ]; then
@@ -17,11 +19,12 @@ else
 	cp -r ./static/* ./public/
 fi
 
+
 # Convert .md posts to .html files
 echo -e "\e[32m[INFO]\e[0m Converting posts"
 YEARS=$(find ./public/posts -type d | awk -F '/' '{print $4}' | tail -n 2)
 for i in $YEARS; do
-	POSTS=$(find ./public/posts/"$i" -name '*.md' | awk -F '/' '{print $5}' | sed 's|.md||g' | head -n 2)
+	POSTS=$(find ./public/posts/"$i" -name '*.md' | awk -F '/' '{print $5}' | sed 's|.md||g')
 	for j in $POSTS; do
 		echo -e "\e[32m[INFO]\e[0m --> Converting post: $i/$j"
 		pandoc \
@@ -32,6 +35,7 @@ for i in $YEARS; do
 			-o "./public/posts/$i/$j.html"
 	done
 done
+
 
 # Iterate tag replacement
 FILES_ALL=$(find ./public ./public/posts ./public/pages -name '*.html')
@@ -71,18 +75,27 @@ for i in $FILES_ALL; do
 		echo -e "\e[32m[INFO]\e[0m Replacing _FOOTER2__"
 		replace "__FOOTER2__" "./public/components/footer2.html" "$i"
 	fi
+	# FOOTER3
+	if grep "_FOOTER3__" "$i"; then
+		echo -e "\e[32m[INFO]\e[0m Replacing _FOOTER3__"
+		replace "__FOOTER3__" "./public/components/footer3.html" "$i"
+	fi
 done
+
 
 # Generate table of contents for each blog post
 POSTS_ALL=$(find ./public/posts -name '*.html')
 for i in $POSTS_ALL; do
 	lua tools/generate_toc.lua "$i"
-	echo -e "\e[32m[INFO]\e[0m generated TOC for $i"
+	echo -e "\e[32m[INFO]\e[0m Generated TOC for $i"
 done
 
-# WIP: Generate blog post list
-# lua ./tools/generate_blogpost_list.lua ./public/posts
+
+# Generate blog post list
+lua ./tools/generate_blogpost_list.lua ./public/posts
+echo -e "\e[32m[INFO]\e[0m Generated blog posts list"
+
 
 # Update RSS Feed
 lua ./tools/generate_feed.lua ./public/posts
-echo -e "\e[32m[INFO]\e[0m generated RSS feed"
+echo -e "\e[32m[INFO]\e[0m Generated RSS feed"

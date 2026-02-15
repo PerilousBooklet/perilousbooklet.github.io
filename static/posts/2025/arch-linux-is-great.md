@@ -56,41 +56,41 @@ So, what is it that makes Arch Linux great?
 
 It's a combination of several factors:
 
-- **DIY**: wether you use the manual install process or not, Arch can be customized almost completely, from the display 
+- DIY: wether you use the manual install process or not, Arch can be customized almost completely, from the display 
   server and the user interface to all kinds of automated scripts and programs.
   This is ideal when custom workflows are required.
-- **KISS**: the first principle of the [Arch philosophy](https://wiki.archlinux.org/title/Arch_Linux#Principles) is simplicity.
+- KISS: the first principle of the [Arch philosophy](https://wiki.archlinux.org/title/Arch_Linux#Principles) is simplicity.
   Arch itself is designed to be as simple as possible: from the package manager usage and configuration to the 
   [website](https://archlinux.org/) and [documentation](https://wiki.archlinux.org/title/Main_page), 
   the developers chose a minimal, intuitive and clear design that emphasizes readability and consistency.
-- **Pacman**: [Arch's package manager](https://wiki.archlinux.org/title/Pacman) is the focus of 
+- Pacman: [Arch's package manager](https://wiki.archlinux.org/title/Pacman) is the focus of 
   the system's greatness. Adding, removing, [querying packages](https://archlinux.org/packages/) and 
   managing custom repositories is a breeze thanks to its concise syntax and easily readable configuration files.
   There's just one thing to be careful of when managing packages on Arch Linux: the official way of updating packages 
   (which guarantees the intended level of stability) requires that all packages be updated at once, and every time you want 
   to install a new package you also update all other packages.
-- **Rolling Release**: Arch Linux is a rolling release distribution. 
+- Rolling Release: Arch Linux is a rolling release distribution. 
   This is one of the most important reasons for its greatness: the system's update management must be done incrementally, 
   ideally every week, so there are never huge lists of conflicts and incompatibilites to solve every time there's an update, 
   even with hundreds of packages installed at the same time (speaking from experience).
-- **Arch Build System**: another great feature of Arch is its package build system.
-  ABS (**A**rch **B**uild **S**ystem) is a collection of tools for compiling source code into compressed archived packages. 
+- Arch Build System: another great feature of Arch is its package build system.
+  ABS (Arch Build System) is a collection of tools for compiling source code into compressed archived packages. 
   These packages are defined each by a single, simple text file (here's the 
   [PKGBUILD for Lite XL](https://gitlab.archlinux.org/archlinux/packaging/packages/lite-xl/-/blob/main/PKGBUILD?ref_type=heads) 
   as an example). 
   The example provided above is relatively simple, but a PKGBUILD can do much more than just fetch source code and run 
   build commands: from [applying patches](https://wiki.archlinux.org/title/Patching_packages) to 
   running update scripts, whatever your use case is, most likely ABS has got you covered.
-- **Arch Wiki**: built on top of the popular [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki), 
+- Arch Wiki: built on top of the popular [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki), 
   Arch's documentation website has been regarded as the best linux documentation for years; 
   even users from other distributions use it!
   Its strong points are the great number of maintainers, the clear and quick interface (it's the same one that Wikipedia uses) and 
   the reputation of reliability it has built over the years.
-- **Community**: the Arch community is vast and rich.
+- Community: the Arch community is vast and rich.
   Whenever the ArchWiki isn't enough to solve a problem, the Arch Forums can be a vast source of past questions and answers.
   Just remember to do all the research you can before asking for help, as the people who answer on the forums dedicate their 
   free time to do it.
-- **Professional Work Culture**: in the recent wake of many open source projects involving themselves with unrelated politics, 
+- Professional Work Culture: in the recent wake of many open source projects involving themselves with unrelated politics, 
   the Arch Linux team still believes that a technical project should remain focused on creating and maintaining a great product.
 
 ## The AUR

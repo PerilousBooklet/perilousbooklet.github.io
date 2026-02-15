@@ -1,9 +1,6 @@
 -----------------------------------
--- TINY STATIC TEMPLATING ENGINE --
+-- Tiny Static Templating Script --
 -----------------------------------
-
-
--- local logs = require "liblogs"
 
 
 local feed_path = "./public/feed.xml"

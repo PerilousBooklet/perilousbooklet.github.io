@@ -1,5 +1,5 @@
 -----------------------------------
--- TINY STATIC TEMPLATING ENGINE --
+-- Tiny Static Templating Script --
 -----------------------------------
 
 

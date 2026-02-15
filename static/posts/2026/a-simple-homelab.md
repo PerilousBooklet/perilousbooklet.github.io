@@ -1,6 +1,6 @@
 ---
 title: A Simple Homelab
-date: 04/01/2026
+date: 15/02/2026
 ---
 
 ## Introduction
@@ -29,14 +29,23 @@ and the lessons I learned along the way.
 
 ## Self-hosting Concepts
 
-... brief overview of fundamental self-hosting concepts ...
+There are a few steps to consider carefully before starting to procure the hardware for a homelab.
 
-- 1. 
-- 2. 
-- 3. 
-- 4. 
-- 5. 
-- 6. 
+To begin with, you have to choose the size of the homelab. The two standard sizes are 19inch and 10inch, respectively for
+enterprise-class server racks and smaller networking racks that you can find in offices.
+
+Next is the choice of hardware: enterprise-class servers can consume hundreds of watts of power so they may not be the ideal 
+choice for a homelab; fortunately there are also much smaller and energy-efficient solutions, namely mini servers and mini pcs.
+
+Then comes the choice of the software stack: the operating system, the security programs like the firewall and programs to
+analyze the incoming traffic for suspicious activity, the program that manages the services that run on the servers and 
+the program to remotely connect to the servers to maintain and update them.
+
+Finally, we have to choose which services to run. Fortunately for us normal citizens, decades of open source software 
+development have produced a vast selection of programs that are free to use and modify.
+
+It should be noted that some basic knowledge of networks is required to properly and securely manage a homelab, like 
+configuring firewalls, managing services and securing credentials.
 
 ## Hardware
 
@@ -51,16 +60,16 @@ capabilities. You could get away with something as little as a Zimaboard with a 
 full-fledged tiny server rack with an 8-node cluster, a UPS and patch panels.
 
 In my case, I wanted something small but spacious, so I opted for the 
-[Deskmate T1](https://deskpi.com/products/deskpi-rackmate-t1-2) tiny rack from DeskPi, which is a miniature equivalent of 
-the standard server racks that you find inside datacenters.
+[Deskmate T1](https://deskpi.com/products/deskpi-rackmate-t1-2) tiny rack from DeskPi, which is the miniature equivalent of 
+a standard server racks that you find inside datacenters.
 The model that I chose featured 8 1U slots, which is plenty enough space for several mini servers.
 
 Since I don't need high speed networking equipment, I bought a small 8-port 1Gb/s switch and a couple of 
-[12-port patch panel](https://deskpi.com/products/deskpi-rackmate-accessory-10-inch-network-switch) to organize the LAN cables.
+[12-port patch panel](https://deskpi.com/products/deskpi-rackmate-accessory-10-inch-network-switch)s to organize the LAN cables.
 
 I also bought a couple 10inch PDUs (power delivery units) to cleanly organize the power cables.
-I wanted to buy a 10inch 1U UPS as well, but it at the time (and even at the time of this writing) there were 
-none available (or even existing probalby), so for the moment I'm using the UPS that I already had.
+I wanted to buy a 10inch 1U UPS as well, but at the time (and even at the time of this writing) there were 
+none available (or even existing probably), so for now I'm using the UPS that I already have.
 
 ## Operating System Stack
 
@@ -70,42 +79,48 @@ and reliable as possible. Arch Linux is a great choice for this use case (provid
 
 I chose Arch Linux as the server operating system of choice (all my servers have x86_64 CPUs, so the support is excellent), 
 mostly because I've been using it for three years and I've learned how to keep it reliable and predictable 
-(also [the Arch Linux website runs on Arch Linux](https://wiki.archlinux.org/title/Frequently_asked_questions#Is_Arch_designed_to_be_used_as_a_server?_A_desktop?_A_workstation?)).
+(see how [the Arch Linux website runs on Arch Linux](https://wiki.archlinux.org/title/Frequently_asked_questions#Is_Arch_designed_to_be_used_as_a_server?_A_desktop?_A_workstation?)).
 
 A fresh server install features at most four hundred packages, of which most are base system packages, so the 
-maintenance is effectively seamless (with the occasional exceptions).
+maintenance is seamless (with the occasional exceptions).
 
-I chose Docker to handle my services , mostly because it's the industry standard for containerization and it's 
+I chose Docker to handle my services, mostly because it's the industry standard for containerization and it's 
 fairly easy to use, especially with Docker Compose. For those that don't know, Docker Compose allows you to
-describe the configuration for one or more containers in a few text files and to perform actions (like start, 
+describe the configuration for one or more containers in a single text file and to perform actions (like start, 
 stop, remove and so on) on all of them at the same time. This is particularly useful for services made of several 
 containers that work together...
 
-- 1. arch linux + ufw + fail2ban
-- 2. mdadm (for manual RAID configuration)
-- 3. bash scripts (for automating complex tasks)
-- 4. ssh (to connect remotely to servers)
-- 5. tmux + mynav (to manage multiple programs without containers)
-- 6. docker compose + lazydocker (to host services)
+- arch linux + ufw + fail2ban
+- mdadm (for manual RAID configuration)
+- bash scripts (for automating complex tasks)
+- ssh (to connect remotely to servers)
+- tmux + mynav (to manage multiple programs without containers)
+- docker compose + lazydocker (to host services)
 
 ## Hosted Services
 
-... brief explanation of my needs for services, my preferred choices and why ...
+The next step is figuring out which services to host.
+Depending on your needs you may have to host from a few to dozens of services.
+In my case, I only need a few.
 
-base
-- 1. simple data sync (syncthing)
-- 2. simple rss feed (miniflux)
-- 3. simple bookmark manager + web browser extension (linkding)
-- 4. simple music streaming (navidrome)
-- 5. simple movie/show streaming (jellyfin)
+The first and most important is a service to aggregate news, for which I chose the minimal and simple [miniflux](https://miniflux.app/).
 
-advanced
-- 1. simple monitoring dashboard for docker containers over multiple servers (beszel)
-- 2. simple hardware management dashboard (DumbAssets)
-- 3. VPN (only when connecting to homelab from outside, es. with personal smartphone/laptop)
-- 4. mail server
-- 5. git platform
+The second is a bookmark manager, since my web browser's toolbar is drowning in stray bookmarks: I chose the simple and 
+minimal [linkding](https://linkding.link/).
+
+Lastly, to host my media library I chose the popular (and probably the only one that is good enough) media 
+server [jellyfin](https://jellyfin.org/).
 
 ## Conclusion
 
-?
+If you've read this far, you're probably already considering how to build your own homelab.
+
+My advice is to start smaller than you think you need to. 
+A single mini PC or mini server running a few Docker containers is enough to learn the fundamentals and decide if 
+self-hosting is something you can maintain comfortably in the long term.
+
+Also, since countless users in the open-source community have created comprehensive documentation, helpful forum discussions and 
+innumerable guides for every imaginable service, the barrier to entry has never been lower, and the alternatives to big tech's 
+walled gardens have never been more mature.
+
+Your personal cloud awaits, all it takes is that first step.

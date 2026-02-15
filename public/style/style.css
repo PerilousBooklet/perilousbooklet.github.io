@@ -137,6 +137,11 @@ blockquote {
 
 .container_cv { width: 550px; }
 .container_cv p,a { font-size: 1.0rem; }
+
+.container_project { width: 400px; }
+.container_project p,a { font-size: 1.0rem; }
+
+
 .container_skills {
   display: flex;
   flex-wrap: wrap;
