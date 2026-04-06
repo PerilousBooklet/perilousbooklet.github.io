@@ -16,10 +16,6 @@ function copyToClipboard() {
   var textElement = document.getElementById("codeblock");
   // Copy the text inside the paragraph element
   navigator.clipboard.writeText(textElement.innerText)
-    .then(() => {
-      console.log("Text copied to clipboard successfully!");
-    })
-    .catch(err => {
-      console.error("Failed to copy text: ", err);
-    });
+    .then(() => console.log("Text copied to clipboard successfully!"))
+    .catch(err => console.error("Failed to copy text: ", err));
 }

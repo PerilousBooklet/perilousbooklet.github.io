@@ -12,6 +12,7 @@ if [ ! -d ./public ]; then
 	mkdir ./public
 	echo -e "\e[32m[INFO]\e[0m Copying source files into ./public"
 	cp -r ./static/* ./public/
+	mkdir -v ./public/learning/data/
 else
 	echo -e "\e[32m[INFO]\e[0m Cleaning ./public/"
 	rm -r ./public/*
@@ -39,11 +40,15 @@ done
 
 # Iterate tag replacement
 FILES_ALL=$(find ./public ./public/posts ./public/pages -name '*.html')
+
 replace() {
+	# NOTE: what is this?
 	CONTENT=$(<"$2")
+	# NOTE: why is this necessary?
 	CONTENT_ESCAPED=$(printf '%s\n' "$CONTENT" | sed 's/[&/\]/\\&/g;:a;N;$!ba;s/\n/\\n/g')
 	sed -i "s|$1|$CONTENT_ESCAPED|g" "$3"
 }
+
 for i in $FILES_ALL; do
 	# HEAD1
 	if grep "__HEAD1__" "$i"; then

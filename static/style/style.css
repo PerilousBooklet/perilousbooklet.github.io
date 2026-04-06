@@ -18,6 +18,10 @@ a {
 a:hover { color: #eb6772; }
 a:active { color: #9acc76; }
 
+ul {
+  list-style-type: disc;
+}
+
 
 blockquote {
   font-style: italic;
@@ -137,6 +141,9 @@ blockquote {
 
 .container_cv { width: 550px; }
 .container_cv p,a { font-size: 1.0rem; }
+
+.container_learning { width: 350px; height: 100vh; }
+.container_learning p,a { font-size: 1.0rem; }
 
 .container_project { width: 400px; }
 .container_project p,a { font-size: 1.0rem; }

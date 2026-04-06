@@ -7,7 +7,7 @@ date: 15/02/2026
 
 In a world dominated by sprawling cloud infrastructure and over-engineered software services, big tech companies 
 have long since decided to betray their original good intentions (see Google's Don't Be Evil pledge) and no longer 
-aim to provide the best quality services for their customers, but to isntead extract as much money as possible from them.
+aim to provide the best quality services for their customers, but to instead extract as much money as possible from them.
 
 This profit-first mindset has seeped into nearly every corner of the digital landscape. From Google’s reliance on 
 sponsored search results, to YouTube deliberately slowing performance on certain browsers, and even to streaming 
