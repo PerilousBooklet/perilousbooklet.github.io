@@ -1,15 +1,19 @@
 # Learning Section
 
-This folder represents the website's Learning page.
+This folder represents the contents of the `Learning` section.
 
-Folders contained in `/static/pages/learning/` represent books.
+Example:
 
-Each book contains one or more folder that represent sections.
-
-Each section folder contains one or more markdown files (file) that represent one chapter each.
-
-Each markdown file contains `##` headers that represent paragraphs.
+- java (book)
+  - introduction (section)
+    - ... (chapter)
+    - ... (chapter)
+  - basics (section)
+    - beginner-guide.md (chapter)
+      - The Syntax (paragraph)
+      - How Building Java Works (paragraph)
+      - ... (paragraph)
+    - ... (chapter)
 
 > [!NOTE]
-> The title of each chapter is used by pandoc to generate the chapter title in the HTML
-
+> The name of each folder/file is used by pandoc to generate the titles in the resulting HTML files

@@ -485,6 +485,19 @@ sudo pacman -Syu \
     python-pywal
 ```
 
+hyprland:
+
+```sh
+sudo pacman -Syu \
+    hyprland xdg-desktop-portal-hyprland \
+    polkit \
+    polybar \
+    feh \
+    dunst \
+    rofi \
+    
+```
+
 ### Display Manager
 
 #### With A Dedicated Display Manager

@@ -363,6 +363,8 @@ TODO: docker setup
 
 TODO: brief intro
 
+Install the [mdadm](https://archlinux.org/packages/core/x86_64/mdadm/) package to setup RAID arrays manually.
+
 ### RAID 1
 
 A `RAID 1` storage setup is useful on a small NAS, to make sure that if one disk dies, the other has a full copy of all the data.
@@ -402,7 +404,13 @@ A `RAID 1` storage setup is useful on a small NAS, to make sure that if one disk
 - Mount the filesystem: 
 - `sudo mkdir -v /pool`
 - `sudo mount /dev/md/pool /pool`
-- TODO: setup auto-mount on boot
+- Auto-mount on boot: write the following into `/etc/fstab`:
+
+NOTE: get the partition UUID from ?
+
+```
+?
+```
 
 ### RAID 5
 

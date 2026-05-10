@@ -1,72 +1,46 @@
-# Git
+# Problem Solving
 
-## Quickstart (per nuovo progetto)
-
-Make sure SSH is installed:
-
-`sudo pacman -Syu openssh`
-
-Enable and start the SSH daemon:
-
-`sudo systemctl enable --now sshd`
-
-Create local SSH key for remote repo interactions:
-`ssh-keygen -f ~/.ssh/keyname`
-
-Set and save the passphrase in your password manager
-
-Add the SSH key to the SSH agent:
-`eval "$(ssh-agent -s)"`
-`ssh-add ~/.ssh/keyname`
-
-NOTA
-- **RICORDA** di ri-aggiungere la chiave a `ssh-agent` con `ssh-add ~/.ssh/keyname`  subito dopo ogni login!
-
-Add it to Github:
-`Personal Profile Page -> Settings -> SSH and GPG Keys -> New SSH Key`
-
-Create a new repo on Github
-
-Clone the repo (select **SSH** link option)
-(es. `git clone git@github.com:username/repository.git`)
-
-Set local git user details:
-`git config --local user.name "user_name"`
-`git config --local user.email "email"`
-
-## I need to revert all current changes to the state of the last commit
+## Tevert all current changes to the state of the last commit
 
 `git reset --hard`
 
-## TODO: write title
+## Stash current changes AND untracked files with custom message
 
 `git stash -u -m message`
 
-## TODO: write title
+## List all stashes
 
 `git stash list`
 
-## TODO: write title
+## Apply last stash
 
-`git stash apply stash@{0}`, replace 0 with appropriate number
+> [!NOTE]
+> The stash index sets the last stash as  `stash@{0}`.
 
-## I want to see the cumulative changes of a branch's commits
+`git stash apply stash@{0}`
+
+## Show the cumulative changes of a branch's commits
 
 `git diff base_branch_hash::feature_branch_hash`
 
-TODO: I want to test the contents of a certain branch on a local temporary branch: 
+## TODO: Test the contents of a certain branch on a local temporary branch: 
 
-## I want to display the history of a repo
+## Display the history of a repo
 
 `git log --graph --oneline --decorate`
 
-## I staged the wrong code
+## Restore from stage a given file
+
+> [!NOTE]
+> Useful when you staged the  wrong code.
 
 `git restore --staged whatever_files`
 
 ## I modified the wrong branch, but I still need the changes: stash the changes and then reset the branch to the latest commit
 
-`git stash -m "comment"` and `git reset --hard`
+`git stash -m "comment"`
+
+`git reset --hard`
 
 ## I need to reset the local repo to the latest from the remote repo
 
