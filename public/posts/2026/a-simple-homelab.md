@@ -56,8 +56,8 @@ chassis) and you will find that you have all the pieces of hardware necessary to
 at home.
 
 A miniature personal cloud can take as many forms as the imagination allows, especially with modern 3d printing 
-capabilities. You could get away with something as little as a Zimaboard with a couple of drives or build a 
-full-fledged tiny server rack with an 8-node cluster, a UPS and patch panels.
+capabilities. You could get away with something as little as a [Zimaboard](https://www.zimaspace.com/products/single-board2-server) 
+with a couple of drives or build a full-fledged tiny server rack with an 8-node cluster, a UPS and patch panels.
 
 In my case, I wanted something small but spacious, so I opted for the 
 [Deskmate T1](https://deskpi.com/products/deskpi-rackmate-t1-2) tiny rack from DeskPi, which is the miniature equivalent of 
@@ -70,6 +70,9 @@ Since I don't need high speed networking equipment, I bought a small 8-port 1Gb/
 I also bought a couple 10inch PDUs (power delivery units) to cleanly organize the power cables.
 I wanted to buy a 10inch 1U UPS as well, but at the time (and even at the time of this writing) there were 
 none available (or even existing probably), so for now I'm using the UPS that I already have.
+
+*Edit: recently I found the [PDU Kit from ShrikeLabs](https://shrikelab.co/) which is the only device I have seen that is
+both readily available, although not fully assembled, and with the right features for a 10inch mini rack*
 
 ## Operating System Stack
 
